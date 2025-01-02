@@ -1,0 +1,123 @@
+﻿@{
+    ViewBag.Title = "Đăng Nhập";
+    Layout = "~/Views/Shared/User_Layout.cshtml";
+}
+
+
+<!-- Hiển thị thông báo lỗi nếu có -->
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger text-center">
+        <strong>@TempData["ErrorMessage"]</strong>
+    </div>
+}
+
+<!-- Hiển thị thông báo thành công nếu có -->
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success text-center">
+        <strong>@TempData["SuccessMessage"]</strong>
+    </div>
+}
+
+<div class="dn-container mx-auto">
+    <h2>Đăng Nhập</h2>
+
+    @using (Html.BeginForm("DangNhap", "DangNhap", FormMethod.Post, new { @class = "dn-form" }))
+    {
+        <label class="dn-label ">Tên đăng nhập:</label>
+        @Html.TextBox("tenDangNhap", null, new { @class = "dn-input", placeholder = "Nhập tên đăng nhập" })
+
+        <label class="dn-label ">Mật khẩu:</label>
+        @Html.Password("matKhau", null, new { @class = "dn-input", placeholder = "Nhập mật khẩu" })
+
+        <input type="submit" value="Đăng Nhập" class="dn-submit" />
+
+        if (ViewBag.ErrorMessage != null)
+        {
+            <div class="dn-error-message">@ViewBag.ErrorMessage</div>
+        }
+
+        <div class="dn-link">
+            <p><a href="@Url.Action("DangKy", "DangNhap")">Đăng ký tài khoản mới</a></p>
+        </div>
+    }
+</div>
+<style>
+
+    /* Container */
+    .dn-container, .dk-container {
+        background-color: white;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        width: 600px;
+    }
+
+    h2 {
+        text-align: center;
+        color: #4CAF50;
+        margin-bottom: 20px;
+    }
+
+    /* Form */
+    .dn-form, .dk-form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .dn-label, .dk-label {
+        left: 0;
+        font-size: 14px;
+        margin-bottom: 5px;
+        color: #333;
+        font-weight: 500;
+    }
+
+    .dn-input, .dk-input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 14px;
+        box-sizing: border-box;
+    }
+
+    .dn-submit, .dk-submit {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        padding: 12px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+    }
+
+        .dn-submit:hover, .dk-submit:hover {
+            background-color: #45a049;
+        }
+
+    /* Error message */
+    .dn-error-message, .dk-error-message {
+        color: red;
+        text-align: center;
+        font-size: 14px;
+    }
+
+    /* Link */
+    .dn-link, .dk-link {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+        .dn-link a, .dk-link a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+            .dn-link a:hover, .dk-link a:hover {
+                text-decoration: underline;
+            }
+</style>

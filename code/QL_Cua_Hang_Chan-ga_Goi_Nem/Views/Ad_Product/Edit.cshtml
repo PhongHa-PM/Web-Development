@@ -1,0 +1,142 @@
+﻿@model QL_Cua_Hang_Chan_ga_Goi_Nem.Models.san_pham
+
+@{
+    ViewBag.Title = "Sửa Sản Phẩm";
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+
+<div class="container">
+    <h2 class="text-center">Sửa Sản Phẩm</h2>
+
+    @using (Html.BeginForm("Edit", "Ad_Product", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        @Html.HiddenFor(model => model.san_pham_id) <!-- Hidden field to store the product ID -->
+
+        <!-- Product Name -->
+        <div class="form-group mb-4">
+            <label for="ten_san_pham">Tên sản phẩm</label>
+            @Html.TextBoxFor(model => model.ten_san_pham, new { @class = "form-control", id = "ten_san_pham" })
+        </div>
+
+        <!-- Product Category -->
+        <div class="form-group mb-4">
+            <label for="loai_san_pham">Loại sản phẩm</label>
+            @Html.TextBoxFor(model => model.loai_san_pham, new { @class = "form-control", id = "loai_san_pham" })
+        </div>
+
+        <!-- Product Description -->
+        <div class="form-group mb-4">
+            <label for="mo_ta_chung">Mô tả chung</label>
+            @Html.TextAreaFor(model => model.mo_ta_chung, new { @class = "form-control", id = "mo_ta_chung" })
+        </div>
+
+        <!-- Brand -->
+        <div class="form-group mb-4">
+            <label for="thuong_hieu">Thương hiệu</label>
+            @Html.TextBoxFor(model => model.thuong_hieu, new { @class = "form-control", id = "thuong_hieu" })
+        </div>
+
+        <!-- Main Image -->
+        <div class="form-group mb-4">
+            <label for="hinh_anh_chinh">Hình ảnh chính</label>
+            <input type="file" name="hinh_anh_chinh" class="form-control" />
+            <div class="file-label">
+                <small class="text-muted">Chọn hình ảnh chính cho sản phẩm.</small>
+            </div>
+            @if (!string.IsNullOrEmpty(Model.hinh_anh_chinh))
+            {
+                <img src="~/Content/Hinh_Anh/@Model.hinh_anh_chinh" alt="Current Image" style="width: 100px; height: auto;" />
+            }
+        </div>
+
+        <!-- Image Gallery -->
+        <div class="form-group mb-4">
+            <label for="danh_sach_hinh_anh">Danh sách hình ảnh</label>
+            <input type="file" name="danh_sach_hinh_anh" multiple class="form-control" />
+            <div class="file-label">
+                <small class="text-muted">Chọn nhiều hình ảnh cho sản phẩm.</small>
+            </div>
+            <div class="d-flex flex-wrap">
+                @foreach (var image in Model.danh_sach_hinh_anh.Split(','))
+                {
+                    <img src="~/Content/Hinh_Anh/@image.Trim()" class="img-thumbnail" style="width: 50px; height: 50px; margin-right: 5px;" />
+                }
+            </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="form-group mb-4">
+            <button type="submit" class="btn btn-primary btn-block">Cập nhật</button>
+        </div>
+    }
+</div>
+
+<style>
+    /* General Form Layout */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Form Input Styling */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.form-control {
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1rem;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* File Input Styling */
+input[type="file"] {
+    padding: 10px;
+}
+
+.file-label {
+    margin-top: 10px;
+}
+
+/* Image Preview */
+img {
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Button Styling */
+.btn-primary {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    background-color: #007bff;
+    border: 1px solid #007bff;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+/* Section Spacing */
+.mb-4 {
+    margin-bottom: 30px;
+}
+
+</style>

@@ -1,0 +1,103 @@
+﻿@model QL_Cua_Hang_Chan_ga_Goi_Nem.Models.khuyen_mai
+
+@{
+    ViewBag.Title = "Chỉnh sửa khuyến mãi";
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Chỉnh sửa khuyến mãi</h2>
+
+    @using (Html.BeginForm(null, null, FormMethod.Post, new { @class = "needs-validation", @novalidate = "novalidate" }))
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true, "", new { @class = "alert alert-danger" })
+
+        @Html.HiddenFor(model => model.khuyen_mai_id)
+
+        <div class="form-group mb-3">
+            <label for="tenKhuyenMai" class="form-label fw-bold">Tên khuyến mãi</label>
+            @Html.EditorFor(model => model.ten_khuyen_mai, new { htmlAttributes = new { @class = "form-control", @id = "tenKhuyenMai", @placeholder = "Nhập tên khuyến mãi" } })
+            @Html.ValidationMessageFor(model => model.ten_khuyen_mai, "", new { @class = "text-danger" })
+        </div>
+
+        <div class="form-group mb-3">
+            <label for="moTa" class="form-label fw-bold">Mô tả</label>
+            @Html.TextAreaFor(model => model.mo_ta, new { @class = "form-control", @id = "moTa", @rows = 4, @placeholder = "Nhập mô tả khuyến mãi" })
+            @Html.ValidationMessageFor(model => model.mo_ta, "", new { @class = "text-danger" })
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 form-group mb-3">
+                <label for="ngayBatDau" class="form-label fw-bold">Ngày bắt đầu</label>
+                @Html.TextBoxFor(model => model.ngay_bat_dau, new { @class = "form-control", @type = "datetime-local", @id = "ngayBatDau" })
+                @Html.ValidationMessageFor(model => model.ngay_bat_dau, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="col-md-6 form-group mb-3">
+                <label for="ngayKetThuc" class="form-label fw-bold">Ngày kết thúc</label>
+                @Html.TextBoxFor(model => model.ngay_ket_thuc, new { @class = "form-control", @type = "datetime-local", @id = "ngayKetThuc" })
+                @Html.ValidationMessageFor(model => model.ngay_ket_thuc, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group mb-3">
+            <label for="giamGia" class="form-label fw-bold">Giảm giá (%)</label>
+            @Html.EditorFor(model => model.giam_gia, new { htmlAttributes = new { @class = "form-control", @id = "giamGia", @placeholder = "Nhập % giảm giá (VD: 10, 20)" } })
+            @Html.ValidationMessageFor(model => model.giam_gia, "", new { @class = "text-danger" })
+        </div>
+
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary px-4 py-2"><i class="fas fa-save"></i> Lưu thay đổi</button>
+            @Html.ActionLink("Quay lại", "KhuyenMaiSP", null, new { @class = "btn btn-secondary px-4 py-2" })
+        </div>
+    }
+</div>
+
+<style>
+    .container {
+        max-width: 800px;
+    }
+
+    .form-label {
+        font-weight: 500;
+        color: #495057;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        border-color: #007bff;
+        font-size: 16px;
+    }
+
+    .btn-secondary {
+        background-color: #6c757d;
+        border-color: #6c757d;
+        font-size: 16px;
+    }
+
+    .form-control {
+        border-radius: .375rem;
+        box-shadow: none;
+        font-size: 16px;
+        padding: .5rem 1rem;
+    }
+
+        .form-control:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 0 0.25rem rgba(38, 143, 255, 0.5);
+        }
+
+    .form-group {
+        margin-bottom: 1.5rem;
+    }
+
+    .alert-danger {
+        font-size: 14px;
+    }
+</style>
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

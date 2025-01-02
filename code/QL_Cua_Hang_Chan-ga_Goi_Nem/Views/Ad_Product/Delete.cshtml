@@ -1,0 +1,158 @@
+﻿@model QL_Cua_Hang_Chan_ga_Goi_Nem.Models.san_pham
+
+@{
+    ViewBag.Title = "Delete Product";
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+
+<div class="container">
+    <h2 class="text-center">Xóa Sản Phẩm</h2>
+
+    <h3 class="text-center">Bạn có chắc chắn muốn xóa sản phẩm này?</h3>
+
+    <fieldset>
+        <legend>Thông Tin Sản Phẩm</legend>
+
+        <!-- Product Name -->
+        <div class="display-label">
+            @Html.DisplayNameFor(model => model.ten_san_pham)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.ten_san_pham)
+        </div>
+
+        <!-- Product Category -->
+        <div class="display-label">
+            @Html.DisplayNameFor(model => model.loai_san_pham)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.loai_san_pham)
+        </div>
+
+        <!-- Product Description -->
+        <div class="display-label">
+            @Html.DisplayNameFor(model => model.mo_ta_chung)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.mo_ta_chung)
+        </div>
+
+        <!-- Brand -->
+        <div class="display-label">
+            @Html.DisplayNameFor(model => model.thuong_hieu)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.thuong_hieu)
+        </div>
+
+        <!-- Main Image -->
+        <div class="display-label">
+            @Html.DisplayNameFor(model => model.hinh_anh_chinh)
+        </div>
+        <div class="display-field">
+            <img src="~/Content/Hinh_Anh/@Model.hinh_anh_chinh" alt="Product Image" style="width: 100px; height: auto;" />
+        </div>
+
+        <!-- Image Gallery -->
+        <div class="display-label">
+            @Html.DisplayNameFor(model => model.danh_sach_hinh_anh)
+        </div>
+        <div class="display-field">
+            @foreach (var image in @Model.danh_sach_hinh_anh.Split(','))
+            {
+                <img src="~/Content/Hinh_Anh/@image.Trim()" style="width: 50px; height: 50px; margin-right: 5px;" />
+            }
+        </div>
+    </fieldset>
+
+    <!-- Delete Form -->
+    @using (Html.BeginForm("Delete", "Ad_Product", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+        @Html.HiddenFor(model => model.san_pham_id)
+
+        <div class="text-center">
+            <button type="submit" class="btn btn-danger">Xóa Sản Phẩm</button>
+            <br /><br />
+            @Html.ActionLink("Quay lại danh sách", "HienThiSP", new { @class = "btn btn-link" })
+        </div>
+    }
+</div>
+
+<style>
+    /* General Layout Styling */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+h2, h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Fieldset Styling */
+fieldset {
+    border: 2px solid #007bff;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    margin-bottom: 30px;
+}
+
+legend {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* Display Section Styling */
+.display-label {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.display-field {
+    margin-bottom: 20px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.display-field img {
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+/* Button Styling */
+button, input[type="submit"] {
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    background-color: #dc3545;
+    border: 1px solid #dc3545;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+button:hover, input[type="submit"]:hover {
+    background-color: #c82333;
+    border-color: #c82333;
+}
+
+a {
+    font-size: 1.1rem;
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+</style>

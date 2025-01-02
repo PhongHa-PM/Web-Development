@@ -1,0 +1,65 @@
+﻿@model IEnumerable<QL_Cua_Hang_Chan_ga_Goi_Nem.Models.hoa_don>
+@{
+    ViewBag.Title = "Danh sách hóa đơn";
+    Layout = "~/Views/Shared/User_Layout.cshtml";
+}
+
+<!-- Hiển thị thông báo lỗi nếu có -->
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger text-center">
+        <strong>@TempData["ErrorMessage"]</strong>
+    </div>
+}
+
+<!-- Hiển thị thông báo thành công nếu có -->
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success text-center">
+        <strong>@TempData["SuccessMessage"]</strong>
+    </div>
+}
+<div class="container mt-4">
+    <h2 class="text-primary">Danh sách hóa đơn đã mua</h2>
+
+    <table class="table table-striped table-bordered mt-4">
+        <thead class="table-dark">
+            <tr>
+                <th class="text-center">Mã hóa đơn</th>
+                <th class="text-center">Ngày mua</th>
+                <th class="text-end">Tổng tiền</th>
+                <th class="text-center">Trạng thái</th>
+                <th class="text-center">Hành động</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var order in Model)
+            {
+                <tr>
+                    <td class="text-center">@order.hoa_don_id</td>
+                    <td class="text-center">@order.ngay_lap</td>
+                    <td class="text-end text-danger">
+                        @(order.tong_tien.HasValue ? order.tong_tien.Value.ToString("N0") + " ₫" : "")
+                    </td>
+                    <td class="text-center">
+                        @if (order.trang_thai == "cho_xac_nhan")
+                        {
+                            <span class="text-warning">Chờ xác nhận</span>
+                        }
+                        else if (order.trang_thai == "da_giao")
+                        {
+                            <span class="text-success">Đã giao</span>
+                        }
+                        else
+                        {
+                            <span class="text-muted">@order.trang_thai</span>
+                        }
+                    </td>
+                    <td class="text-center">
+                        <a href="@Url.Action("ChiTietHoaDon", "Us_Order", new { id = order.hoa_don_id })" class="btn btn-sm btn-primary">Xem chi tiết</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

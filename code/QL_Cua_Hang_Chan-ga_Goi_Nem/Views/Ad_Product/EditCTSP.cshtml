@@ -1,0 +1,173 @@
+﻿@model QL_Cua_Hang_Chan_ga_Goi_Nem.Models.chi_tiet_san_pham
+
+@{
+    ViewBag.Title = "Sửa Chi Tiết Sản Phẩm";
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+
+<div class="container">
+    <h2 class="text-center mb-4">Cập nhật chi tiết sản phẩm</h2>
+
+    @using (Html.BeginForm("EditCTSP", "Ad_Product", FormMethod.Post, new { @class = "form" }))
+    {
+        <!-- Trường ẩn cho chi_tiet_id và san_pham_id -->
+        @Html.HiddenFor(model => model.chi_tiet_id)
+        @Html.HiddenFor(model => model.san_pham_id)
+
+        <!-- Kích thước -->
+        <div class="coolinput">
+            <label for="kich_thuoc" class="text">Kích thước</label>
+            @Html.EditorFor(model => model.kich_thuoc, new { @class = "input form-control", id = "kich_thuoc" })
+        </div>
+
+        <!-- Độ dày -->
+        <div class="coolinput">
+            <label for="do_day" class="text">Độ dày</label>
+            @Html.EditorFor(model => model.do_day, new { @class = "input form-control", id = "do_day" })
+        </div>
+
+        <!-- Màu sắc -->
+        <div class="coolinput">
+            <label for="mau_sac" class="text">Màu sắc</label>
+            @Html.EditorFor(model => model.mau_sac, new { @class = "input form-control", id = "mau_sac" })
+        </div>
+
+        <!-- Chất liệu -->
+        <div class="coolinput">
+            <label for="chat_lieu" class="text">Chất liệu</label>
+            @Html.EditorFor(model => model.chat_lieu, new { @class = "input form-control", id = "chat_lieu" })
+        </div>
+
+        <!-- Giá -->
+        <div class="coolinput">
+            <label for="gia" class="text">Giá</label>
+            @Html.EditorFor(model => model.gia, new { @class = "input form-control", id = "gia" })
+        </div>
+
+        <!-- Số lượng tồn -->
+        <div class="coolinput">
+            <label for="so_luong_ton" class="text">Số lượng tồn</label>
+            @Html.EditorFor(model => model.so_luong_ton, new { @class = "input form-control", id = "so_luong_ton" })
+        </div>
+
+        <!-- Nút lưu -->
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary">Cập nhật</button>
+        </div>
+    }
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+<style>
+    /* Loại bỏ border và outline của input */
+    input, textarea, select {
+        border: none;
+        outline: none;
+    }
+
+    /* General Form Layout */
+    .container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 30px;
+    }
+
+    h2 {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 30px;
+    }
+
+    /* Form Input Styling */
+    .coolinput {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+        .coolinput label.text {
+            font-size: 1rem;
+            color: #333;
+            font-weight: 600;
+            position: relative;
+            margin-bottom: 5px;
+            padding: 0 5px;
+            background: #f5f5f5;
+            width: fit-content;
+        }
+
+        .coolinput input.input {
+            padding: 12px 10px;
+            font-size: 1rem;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            background: #fafafa;
+            transition: border 0.3s ease;
+        }
+
+            .coolinput input.input:focus {
+                outline: none;
+                border-color: #007bff;
+            }
+
+            .coolinput input.input::placeholder {
+                color: #888;
+            }
+
+    /* Button Styling */
+    .btn-primary {
+        padding: 10px 20px;
+        font-size: 1.1rem;
+        border-radius: 5px;
+        background-color: #007bff;
+        border: 1px solid #007bff;
+        transition: background-color 0.3s;
+    }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+
+    /* Section Spacing */
+    .mb-4 {
+        margin-bottom: 30px;
+    }
+
+    /* General Form Layout */
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    label {
+        font-size: 1.1rem;
+        color: #333;
+        margin-bottom: 5px;
+    }
+
+    .form-control,
+    input,
+    textarea,
+    select {
+        border-radius: 5px;
+        border: 0.5px solid #ccc;
+        padding: 10px;
+        font-size: 1rem;
+        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+        /* File Input Styling */
+        input[type="file"] {
+            padding: 10px;
+        }
+
+    /* Text Center */
+    .text-center {
+        text-align: center;
+    }
+</style>

@@ -1,0 +1,301 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="~/Content/bootstrap-5.3.3-dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/Content/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+    <script src="~/Content/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header>
+        <!-- Navbar Section -->
+        <div class="fixed-top d-flex nav-top pt-3 pb-3">
+            <div class="col-4 p-0">
+                <div class="group-item w-100 p-0">
+                    <div class="item me-3">
+                        <a href="~/Us_Order/Index"><i class='bx bx-bookmarks'></i></i></a>
+                        <a href="~/Us_Order/Index">Đơn hàng</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 p-0">
+                <div class="logo">
+                    <a href="~/Us_Product/HienThiSanPhamNem">
+                        <img style="width:150px" src="~/Content/Hinh_Anh/Logo/Logo-bg.png" />
+                    </a>
+                </div>
+            </div>
+            <div class="col-4 p-0">
+                <div class="group-item w-100 p-0">
+                    <div class="item me-3">
+                        <a href="~/Us_Product/GioHang"><i class='bx bx-cart'></i></a>
+                        <a href="~/Us_Product/GioHang">Giỏ hàng</a>
+                    </div>
+                    <div class="item">
+                        <a href="~/DangNhap/ThongTinTaiKhoan" class="" style="text-decoration:none">
+                            <i class='bx bx-user'></i>
+                            @if (Session["UserName"] != null)
+                            {
+                                <span style="font-size:15px;">@Session["UserName"]</span>
+                            }
+                            else
+                            {
+                                <span style="font-size:14px">Tài Khoản</span>
+                            }
+                        </a>
+                        <div class="dropdown">
+                            <button class="btn dropdown-toggle shadow-none" type="button" style="width:fit-content; height:fit-content; outline:none" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                            <ul class="dropdown-menu" style="z-index:10">
+                                @if (Session["UserName"] != null)
+                                {
+                                    <li><a class="dropdown-item" href="~/DangNhap/DangXuat">Đăng xuất</a></li>
+
+                                    if (Session["VaiTro"] != null && Session["VaiTro"].ToString() == "admin")
+                                    {
+                                        <li><a class="dropdown-item" href="~/Ad_Product/HienThiSP">Rời đi</a></li>
+                                    }
+                                }
+                                else
+                                {
+                                    <li><a class="dropdown-item" href="~/DangNhap/DangNhap">Đăng nhập</a></li>
+                                    <li><a class="dropdown-item" href="~/DangNhap/DangKy">Đăng ký</a></li>
+                                }
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="container d-flex sticky-top" style="margin-top:70px;">
+            <div class="col-8">
+                <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                    <div class="container-fluid">
+                        <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                            <a class="navbar-brand" href="#"></a>
+                        </button>
+                        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <ul class="navbar-nav justify-content-start flex-grow-1 pe-3 border-0">
+                                    <li><a href="~/Us_Product/HienThiSanPhamNem" class="nav-link">Nệm</a></li>
+                                    <li><a href="~/Us_Product/HienThiSanPhamChanGa" class="nav-link">Chăn ga</a></li>
+                                    <li><a href="~/Us_Product/HienThiSanPhamGoi" class="nav-link">Gối</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <div class="col-4 .collapse.navbar-collapse p-3">
+                <form class="d-flex" role="search" method="GET" action="@Url.Action("Search", "Us_Search")"
+                      style="display: flex; justify-content: center; align-items: center; background: #edebff; border-radius: 16px; width: 100%; padding: 0 10px;">
+                    <input class="form-control form-check-inline shadow-none border-0 me-2" type="search" name="TimKiem"
+                           placeholder="Tìm kiếm nhanh" aria-label="Search"
+                           style="background-color: transparent; border: none; box-shadow: none; outline: none;" />
+                    <button type="submit" class="border-0 shadow-none" style="background: none; border: none; box-shadow: none;">
+                        <i class='bx bx-search'></i>
+                    </button>
+                </form>
+
+            </div>
+        </div>
+    </header>
+    <div style="min-height:600px">
+        @RenderBody()
+    </div>
+    <footer>
+        <div class="footer container">
+            <section class="row footer-top">
+                <div class="col">
+                    <img style="width:300px" src="~/Content/Hinh_Anh/Logo/Logo-removebg.png" />
+                    <p>Trụ sở: Tầng 7, tòa nhà Nhật An, 30D phố Kim Mã Thượng, phường Cống Vị, quận Ba Đình, HN.    </p>
+                </div>
+                <div class="col">
+                    <ul>
+                        <li>
+                            <p>Hotline tư vấn sản phẩm:<a href="#">1800 2092</a></p>
+                        </li>
+                        <li>
+                            <p>Hotline hậu mãi, CSKH:<a href="#">1800 2092</a></p>
+                        </li>
+                        <li>
+                            <p>Email: <span>trainghiem@vuanem.com</span></p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h4>Địa chỉ cửa hàng</h4>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.062527615134!2d106.62637497488295!3d10.806523089344092!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752be2853ce7cd%3A0x4111b3b3c2aca14a!2zMTQwIMSQLiBMw6ogVHLhu41uZyBU4bqlbiwgVMOieSBUaOG6oW5oLCBUw6JuIFBow7osIEjhu5MgQ2jDrSBNaW5oLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1733650105237!5m2!1svi!2s" width="450" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </section>
+            <div class="row">
+                <p class="text-center" style="color: rgb(83, 83, 83);">Copyright © 2024 Công ty cổ phần Vua Nệm. Mã số doanh nghiệp 0107968516 do Sở Kế hoạch Đầu tư Hà Nội cấp lần 1 ngày 18/8/2017</p>
+            </div>
+        </div>
+
+    </footer>
+</body>
+@RenderSection("Scripts", required: false)
+</html>
+
+<style>
+    /*Header*/
+    :root {
+        --primary-color: #2d2e7f;
+        --second-primary-color: #f6a733;
+    }
+
+    /* Custom styling for the navbar Nav-top */
+    header {
+        background: #fff;
+    }
+
+    .nav-top {
+        border-bottom: 1px solid rgb(76, 76, 76);
+        background: #fff;
+    }
+
+    .headder-main {
+        height: fit-content;
+        background-color: white;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+    }
+
+    .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    .group-item {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+        .group-item .item {
+            display: flex;
+            align-items: center;
+        }
+
+        .group-item a {
+            text-align: center;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .group-item > .item > a > i {
+            font-size: 25px;
+        }
+
+    /* Custom styling for the navbar Nav-bot */
+    .nav-bot {
+        margin-top: 50px;
+        padding: 5px 0;
+    }
+
+    .nav-link {
+        color: var(--primary-color);
+        font-weight: 500;
+        &:hover
+
+    {
+        color: var(--second-primary-color);
+    }
+
+    }
+
+    /* Dropdown Account Custom */
+    .item .dropdown-toggle {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--primary-color);
+        text-decoration: none;
+    }
+
+        .item .dropdown-toggle span {
+            margin-left: 5px;
+        }
+
+    .dropdown-menu {
+        background: #fff;
+        border: 1px solid #ddd;
+    }
+
+        .dropdown-menu .dropdown-item {
+            font-size: 14px;
+            color: var(--primary-color);
+        }
+
+            .dropdown-menu .dropdown-item:hover {
+                background: var(--second-primary-color);
+                color: white;
+            }
+
+    input::placeholder {
+        font-size: 14px;
+    }
+
+    form i {
+        color: var(--primary-color);
+        font-size: 24px;
+    }
+
+    /* Custom styling for the navbar Content */
+
+    .carousel-inner img {
+        object-fit: cover;
+        height: 400px;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        z-index: 1000;
+    }
+
+    /* Custom styling for the navbar Footer */
+
+    .footer-top {
+        border-bottom: 1px solid rgb(76, 76, 76);
+    }
+
+    ul {
+        list-style: none;
+    }
+
+        ul li {
+            padding: 5px 0;
+            font-size: 16px;
+            border-bottom: 1px solid #ddd;
+        }
+
+            ul li a:hover {
+                color: var(--second-primary-color);
+            }
+
+            ul li a, ul li span {
+                color: black;
+                text-decoration: none;
+                font-weight: bold;
+            }
+    /*Header*/
+
+</style>

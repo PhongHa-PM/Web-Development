@@ -1,0 +1,42 @@
+﻿@model IEnumerable<dynamic>
+@{
+    ViewBag.Title = "Chi Tiết Sản Phẩm Khuyến Mãi";
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+
+<h2>Chi Tiết Sản Phẩm Khuyến Mãi</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Tên Sản Phẩm</th>
+            <th>Kích Thước</th>
+            <th>Độ Dày</th>
+            <th>Màu Sắc</th>
+            <th>Chất Liệu</th>
+            <th>Giá</th>
+            <th>Giá Khuyến Mãi</th>
+            <th>Thao Tác</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.ten_san_pham</td>
+                <td>@item.kich_thuoc</td>
+                <td>@item.do_day</td>
+                <td>@item.mau_sac</td>
+                <td>@item.chat_lieu</td>
+                <td>@item.gia</td>
+                <td>@item.gia_khuyen_mai</td>
+                <td>
+                    @using (Html.BeginForm("XoaSanPhamKhuyenMai", "Ad_Services", new { khuyenMaiId = ViewBag.KhuyenMaiId, sanPhamId = item.san_pham_id }, FormMethod.Post))
+                    {
+                        <button type="submit" class="btn btn-danger">Xóa</button>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

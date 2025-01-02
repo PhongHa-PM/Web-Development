@@ -1,0 +1,169 @@
+﻿@{
+    ViewBag.Title = "Đăng Ký";
+    Layout = "~/Views/Shared/User_Layout.cshtml";
+}
+
+<div class="dk-container mx-auto">
+    <h2>Đăng Ký</h2>
+
+    @using (Html.BeginForm("DangKy", "DangNhap", FormMethod.Post, new { @class = "dk-form", id = "createForm" }))
+    {
+        <label class="dk-label">Tên đăng nhập:</label>
+        @Html.TextBox("tenDangNhap", null, new { @class = "dk-input", placeholder = "Nhập tên đăng nhập", id = "tenDangNhap" })
+
+        <label class="dk-label">Mật khẩu:</label>
+        @Html.Password("matKhau", null, new { @class = "dk-input", placeholder = "Nhập mật khẩu", id = "matKhau" })
+
+        <label class="dk-label">Email:</label>
+        @Html.TextBox("email", null, new { @class = "dk-input", placeholder = "Nhập email", id = "email" })
+
+        <label class="dk-label">Số điện thoại:</label>
+        @Html.TextBox("soDienThoai", null, new { @class = "dk-input", placeholder = "Nhập số điện thoại (tuỳ chọn)" })
+
+        <label class="dk-label">Địa chỉ:</label>
+        @Html.TextArea("diaChi", null, new { @class = "dk-input", placeholder = "Nhập địa chỉ (tuỳ chọn)" })
+
+        <input type="submit" value="Đăng Ký" class="dk-submit" />
+
+        if (ViewBag.ErrorMessage != null)
+        {
+            <div class="dk-error-message">@ViewBag.ErrorMessage</div>
+        }
+
+        <div class="dk-link">
+            <p><a href="@Url.Action("DangNhap", "DangNhap")">Đã có tài khoản? Đăng nhập tại đây</a></p>
+        </div>
+    }
+</div>
+@section Scripts {
+    <script type="text/javascript">
+        // Hàm kiểm tra Tên đăng nhập không có dấu và không có khoảng trắng
+        function validateUsername(username) {
+            const regex = /^[a-zA-Z0-9_]+$/; // Chỉ cho phép chữ cái, số và dấu gạch dưới
+            return regex.test(username);
+        }
+
+        // Hàm kiểm tra email có đuôi email.com hoặc yahoo.com
+        function validateEmail(email) {
+            const regex = /^[a-zA-Z0-9._%+-]+(@@gmail.com)$/;
+            return regex.test(email);
+        }
+
+        // Hàm kiểm tra mật khẩu phải có ít nhất 6 ký tự, chứa chữ và số
+        function validatePassword(password) {
+            const regex = /^(?=.*[a-zA-Z])(?=.*\d).{6,}$/; // Ít nhất 1 chữ cái, 1 số, và dài ít nhất 6 ký tự
+            return regex.test(password);
+        }
+
+        // Lắng nghe sự kiện submit của form
+        document.getElementById("createForm").addEventListener("submit", function (event) {
+            let valid = true;
+
+            // Lấy giá trị các trường
+            const username = document.getElementById("tenDangNhap").value;
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("matKhau").value;
+
+            // Kiểm tra Tên đăng nhập
+            if (!validateUsername(username)) {
+                alert("Tên đăng nhập không hợp lệ. Chỉ được sử dụng chữ, số và dấu gạch dưới, không có khoảng trắng hoặc dấu.");
+                valid = false;
+            }
+
+            // Kiểm tra Email
+            if (!validateEmail(email)) {
+                alert("Email phải có đuôi @@gmail.com hoặc @@yahoo.com");
+                valid = false;
+            }
+
+            // Kiểm tra Mật khẩu
+            if (!validatePassword(password)) {
+                alert("Mật khẩu phải có ít nhất 6 ký tự, chứa chữ cái và số.");
+                valid = false;
+            }
+
+            // Nếu không hợp lệ, ngừng gửi form
+            if (!valid) {
+                event.preventDefault();
+            }
+        });
+    </script>
+}
+<style>
+
+    /* Container */
+    .dn-container, .dk-container {
+        background-color: white;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        width: 600px;
+    }
+
+    h2 {
+        text-align: center;
+        color: #4CAF50;
+        margin-bottom: 20px;
+    }
+
+    /* Form */
+    .dn-form, .dk-form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .dn-label, .dk-label {
+        font-size: 14px;
+        margin-bottom: 5px;
+        color: #333;
+        font-weight: 500;
+    }
+
+    .dn-input, .dk-input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 14px;
+        box-sizing: border-box;
+    }
+
+    .dn-submit, .dk-submit {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        padding: 12px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+    }
+
+        .dn-submit:hover, .dk-submit:hover {
+            background-color: #45a049;
+        }
+
+    /* Error message */
+    .dn-error-message, .dk-error-message {
+        color: red;
+        text-align: center;
+        font-size: 14px;
+    }
+
+    /* Link */
+    .dn-link, .dk-link {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+        .dn-link a, .dk-link a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+            .dn-link a:hover, .dk-link a:hover {
+                text-decoration: underline;
+            }
+</style>

@@ -1,0 +1,96 @@
+﻿@model List<QL_Cua_Hang_Chan_ga_Goi_Nem.Models.User_Md.CartItem>
+@{
+    ViewBag.Title = "Giỏ hàng";
+    Layout = "~/Views/Shared/User_Layout.cshtml";
+}
+
+<!-- Hiển thị thông báo lỗi nếu có -->
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger text-center">
+        <strong>@TempData["ErrorMessage"]</strong>
+    </div>
+}
+
+<!-- Hiển thị thông báo thành công nếu có -->
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success text-center">
+        <strong>@TempData["SuccessMessage"]</strong>
+    </div>
+}
+
+<div class="container">
+    <a href="~/Us_Product/HienThiSanPhamNem" style="font-size:40px; text-decoration:none">
+        <i class='bx bx-chevron-left'></i>
+    </a>
+    @if (Model.Any())
+    {
+        <table class="table" style="background-color: #2D2E7F;">
+            <thead>
+                <tr>
+                    <th>Hình ảnh</th>
+                    <th>Tên sản phẩm</th>
+                    <th>Kích thước</th>
+                    <th>Màu Sắc</th>
+                    <th>Độ dày</th>
+                    <th>Giá</th>
+                    <th>Số lượng</th>
+                    <th>Thành tiền</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            <img src="@Url.Content("~/Content/Hinh_Anh/" + item.HinhAnh)" width=70 />
+                        </td>
+                        <td>@item.TenSanPham</td>
+                        <td>@item.KichThuoc</td>
+                        <td>@item.MauSac</td>
+                        <td>@item.DoDay cm</td>
+                        <td>@item.Gia.ToString("N0") đ</td>
+                        <td width="50">
+                            <form class="p-0" style="width:fit-content; display:inline-block" method="post" action="@Url.Action("CapNhatGioHang", "Us_Product")">
+                                <input type="hidden" name="id" value="@item.SanPhamId" />
+                                <input type="number"
+                                       name="soLuong"
+                                       value="@item.SoLuong"
+                                       min="1"
+                                       max="@item.SoLuongTon"
+                                       oninput="this.value = Math.max(1, Math.min(this.value, @item.SoLuongTon))" />
+                                <button type="submit" class="btn btn-primary btn-sm">Cập nhật</button>
+                            </form>
+                        </td>
+                        <td>@item.ThanhTien.ToString("N0") đ</td>
+                        <td>
+                            <a href="@Url.Action("XoaKhoiGio", "Us_Product", new { id = item.SanPhamId })" class="btn btn-danger btn-sm">Xóa</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <div class="d-flex justify-content-end">
+            <h4 style="font-size: 25px; font-weight: 800;">
+                <span>Tổng cộng:</span>
+                <span style="color: red; margin-right: 10px;">@Model.Sum(i => i.ThanhTien).ToString("N0") đ</span>
+            </h4>
+        </div>
+
+        <!-- Nút Mua ngay -->
+        <div class="text-end mt-3">
+            <a href="@Url.Action("ThanhToan", "Us_Product")" class="btn btn-danger" style="width: 200px;">
+                Mua ngay
+            </a>
+        </div>
+    }
+    else
+    {
+        <p class="GioHangNull">Giỏ hàng của bạn đang trống.</p>
+    }
+</div>
+
+

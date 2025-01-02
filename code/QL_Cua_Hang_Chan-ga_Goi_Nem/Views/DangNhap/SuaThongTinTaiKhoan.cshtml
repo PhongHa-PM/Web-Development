@@ -1,0 +1,80 @@
+﻿@model QL_Cua_Hang_Chan_ga_Goi_Nem.Models.nguoi_dung
+
+@{
+    ViewBag.Title = "Sửa Thông Tin Tài Khoản";
+    Layout = "~/Views/Shared/User_Layout.cshtml";
+}
+
+<div class="container mt-5">
+    <a href="~/DangNhap/ThongTinTaiKhoan" style="font-size:40px; text-decoration:none"><i class='bx bx-chevron-left'></i></a>
+    <h4 class="text-center mb-4">Sửa Thông Tin Tài Khoản</h4>
+
+    @using (Html.BeginForm("SuaThongTinTaiKhoan", "DangNhap", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+
+        <!-- Email -->
+        <div class="form-group mb-3">
+            <label for="email" class="form-label">Email:</label>
+            @Html.TextBoxFor(m => m.email, new { @class = "form-control", placeholder = "Nhập email", required = "required" })
+        </div>
+
+        <!-- Số điện thoại -->
+        <div class="form-group mb-3">
+            <label for="so_dien_thoai" class="form-label">Số điện thoại:</label>
+            @Html.TextBoxFor(m => m.so_dien_thoai, new { @class = "form-control", placeholder = "Nhập số điện thoại", required = "required" })
+        </div>
+
+        <!-- Địa chỉ -->
+        <div class="form-group mb-4">
+            <label for="dia_chi" class="form-label">Địa chỉ:</label>
+            @Html.TextBoxFor(m => m.dia_chi, new { @class = "form-control", placeholder = "Nhập địa chỉ", required = "required" })
+        </div>
+
+        <button type="submit" class="btn btn-success" style="width:100%">Cập nhật thông tin</button>
+    }
+            
+</div>
+
+<style>
+    /* Tùy chỉnh cho form */
+    .p-4 {
+        padding: 20px;
+    }
+
+    .form-label {
+        font-weight: bold;
+        width:300px;
+        display: block; /* Đảm bảo label nằm theo chiều dọc */
+        margin-bottom: 8px; /* Thêm khoảng cách dưới label */
+    }
+
+    .form-control {
+        font-size: 16px;
+        padding: 10px;
+        width: 100%; /* Chiếm toàn bộ chiều rộng */
+        display: block; /* Đảm bảo TextBoxFor nằm dưới label */
+        margin-bottom: 15px; /* Thêm khoảng cách giữa các TextBoxFor */
+    }
+
+    .btn {
+        font-size: 16px;
+        padding: 12px;
+        font-weight: bold;
+    }
+
+    .btn-success {
+        background-color: #28a745;
+        border-color: #28a745;
+    }
+
+        .btn-success:hover {
+            background-color: #218838;
+            border-color: #1e7e34;
+        }
+
+    /* Đảm bảo form các phần tử sẽ hiển thị theo chiều dọc */
+    .form-group {
+        margin-bottom: 20px;
+    }
+</style>

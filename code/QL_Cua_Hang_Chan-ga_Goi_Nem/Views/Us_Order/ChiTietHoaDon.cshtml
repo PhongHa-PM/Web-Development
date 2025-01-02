@@ -1,0 +1,82 @@
+﻿@model QL_Cua_Hang_Chan_ga_Goi_Nem.Models.User_Md.ChiTietHoaDonViewModel
+@{
+    ViewBag.Title = "Chi tiết hóa đơn";
+    Layout = "~/Views/Shared/User_Layout.cshtml";
+}
+
+<div class="container mt-4">
+
+    <h3 class="text-primary">Thông tin hóa đơn đã mua</h3>
+    <table class="table table-striped table-bordered mt-3">
+        <tbody>
+            <tr>
+                <th class="text-end">Mã hóa đơn:</th>
+                <td>@Model.HoaDonId</td>
+            </tr>
+            <tr>
+                <th class="text-end">Ngày mua:</th>
+                <td>@Model.NgayLap.ToString("dd/MM/yyyy HH:mm")</td>
+            </tr>
+            <tr>
+                <th class="text-end">Tổng tiền:</th>
+                <td class="text-danger fw-bold">
+                    @Model.TongTien.ToString("N0") ₫
+                </td>
+            </tr>
+            <tr>
+                <th class="text-end">Trạng thái:</th>
+                <td>
+                    @if (@Model.TrangThai == "cho_xac_nhan")
+                    {
+                        <span class="text-warning">Chờ xác nhận</span>
+                    }
+                    else if (@Model.TrangThai == "da_giao")
+                    {
+                        <span class="text-success">Đã giao</span>
+                    }
+                    else
+                    {
+                        <span class="text-muted">@Model.TrangThai</span>
+                    }
+                </td>
+            </tr>
+            <tr>
+                <th class="text-end">Địa chỉ giao hàng:</th>
+                <td>@Model.DiaChiGiaoHang</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3 class="text-primary mt-4">Sản phẩm đã mua</h3>
+    <table class="table table-striped table-bordered mt-3">
+        <thead class="table-dark">
+            <tr>
+                <th>Tên sản phẩm</th>
+                <th>Kích thước</th>
+                <th>Màu sắc</th>
+                <th>Độ dày</th>
+                <th>Số lượng</th>
+                <th>Giá</th>
+                <th>Tổng tiền</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.ChiTietHoaDon)
+            {
+                <tr>
+                    <td>@item.TenSanPham</td> <!-- Tên sản phẩm -->
+                    <td>@item.KichThuoc</td>
+                    <td>@item.MauSac</td>
+                    <td>@item.DoDay</td>
+                    <td>@item.SoLuong</td>
+                    <td class="text-end">@item.Gia.ToString("N0") ₫</td>
+                    <td class="text-end">@item.TongTien.ToString("N0") ₫</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <div class="d-flex justify-content-end mt-4">
+        <a href="@Url.Action("Index", "Us_Order")" class="btn btn-secondary">Quay lại</a>
+    </div>
+</div>

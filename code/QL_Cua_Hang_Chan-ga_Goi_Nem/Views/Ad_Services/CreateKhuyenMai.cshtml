@@ -1,0 +1,141 @@
+﻿@model QL_Cua_Hang_Chan_ga_Goi_Nem.Models.khuyen_mai
+
+@{
+    ViewBag.Title = "Tạo Mới Khuyến Mãi";
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+
+<div class="container">
+    <h2 class="text-center">Tạo Mới Khuyến Mãi</h2>
+
+    @using (Html.BeginForm("CreateKhuyenMai", "Ad_Services", FormMethod.Post, new { @class = "form-horizontal" }))
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <!-- Tên Khuyến Mãi -->
+        <div class="form-group mb-4">
+            <label for="ten_khuyen_mai">Tên Khuyến Mãi</label>
+            @Html.TextBoxFor(model => model.ten_khuyen_mai, new { @class = "form-control", id = "ten_khuyen_mai" })
+        </div>
+
+        <!-- Mô Tả -->
+        <div class="form-group mb-4">
+            <label for="mo_ta">Mô Tả</label>
+            @Html.TextAreaFor(model => model.mo_ta, new { @class = "form-control", id = "mo_ta" })
+        </div>
+
+        <!-- Ngày Bắt Đầu -->
+        <div class="form-group mb-4">
+            <label for="ngay_bat_dau">Ngày Bắt Đầu</label>
+            @Html.TextBoxFor(model => model.ngay_bat_dau, new { @type = "datetime-local", @class = "form-control", id = "ngay_bat_dau" })
+        </div>
+
+        <!-- Ngày Kết Thúc -->
+        <div class="form-group mb-4">
+            <label for="ngay_ket_thuc">Ngày Kết Thúc</label>
+            @Html.TextBoxFor(model => model.ngay_ket_thuc, new { @type = "datetime-local", @class = "form-control", id = "ngay_ket_thuc" })
+        </div>
+
+        <!-- Giảm Giá -->
+        <div class="form-group mb-4">
+            <label for="giam_gia">Giảm Giá (%)</label>
+            @Html.EditorFor(model => model.giam_gia, new { @class = "form-control", id = "giam_gia" })
+        </div>
+
+        <!-- Nút Submit -->
+        <div class="form-group mb-4">
+            <button type="submit" class="btn btn-primary btn-block">Tạo Khuyến Mãi</button>
+        </div>
+    }
+</div>
+
+<div class="text-center mt-4">
+    @Html.ActionLink("Quay lại danh sách", "KhuyenMaiSP", null, new { @class = "btn btn-secondary" })
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+<style>
+    /* General Form Layout */
+    .container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 30px;
+    }
+
+    h2 {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 30px;
+    }
+
+    /* Form Input Styling */
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    label {
+        font-size: 1.1rem;
+        color: #333;
+        margin-bottom: 5px;
+    }
+
+    .form-control {
+        border-radius: 5px;
+        padding: 10px;
+        font-size: 1rem;
+        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+        transition: border-color 0.3s ease;
+    }
+
+        /* Input Focus Effect */
+        .form-control:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+            outline: none;
+        }
+
+    /* File Input Styling */
+    input[type="file"] {
+        padding: 10px;
+    }
+
+    /* Button Styling */
+    .btn-primary {
+        padding: 10px 20px;
+        font-size: 1.1rem;
+        border-radius: 5px;
+        background-color: #007bff;
+        border: 1px solid #007bff;
+        transition: background-color 0.3s ease;
+    }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+
+    /* Secondary Button */
+    .btn-secondary {
+        padding: 10px 20px;
+        font-size: 1.1rem;
+        border-radius: 5px;
+        background-color: #6c757d;
+        border: 1px solid #6c757d;
+        transition: background-color 0.3s ease;
+    }
+
+        .btn-secondary:hover {
+            background-color: #5a6268;
+            border-color: #5a6268;
+        }
+
+    /* Section Spacing */
+    .mb-4 {
+        margin-bottom: 30px;
+    }
+</style>

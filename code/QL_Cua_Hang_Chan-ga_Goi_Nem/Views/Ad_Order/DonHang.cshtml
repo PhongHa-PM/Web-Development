@@ -1,0 +1,79 @@
+﻿@model IEnumerable<QL_Cua_Hang_Chan_ga_Goi_Nem.Models.Admin_Md.OrderViewModel>
+@{
+    ViewBag.Title = "DonHang";
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+
+<h2 class="mb-4">Danh Sách Hóa Đơn</h2>
+
+<!-- Form lọc -->
+<form class="row g-3 mb-4" method="get" action="@Url.Action("DonHang")">
+    <div class="col-md-3">
+        <label for="ngayBatDau" class="form-label">Từ Ngày</label>
+        <input type="date" name="ngayBatDau" id="ngayBatDau" class="form-control" value="@Request.QueryString["ngayBatDau"]" />
+    </div>
+    <div class="col-md-3">
+        <label for="ngayKetThuc" class="form-label">Đến Ngày</label>
+        <input type="date" name="ngayKetThuc" id="ngayKetThuc" class="form-control" value="@Request.QueryString["ngayKetThuc"]" />
+    </div>
+    <div class="col-md-3">
+        <label for="trangThai" class="form-label">Trạng Thái</label>
+        <select name="trangThai" id="trangThai" class="form-control">
+            <option value="">Tất Cả</option>
+            <option value="cho_xac_nhan"
+                    @if (Request.QueryString["trangThai"] == "cho_xac_nhan") { @: selected
+                    }>
+                Chờ Xác Nhận
+            </option>
+            <option value="da_giao"
+                    @if (Request.QueryString["trangThai"] == "da_giao") { @: selected
+                    }>
+                Đã Giao
+            </option>
+        </select>
+    </div>
+    <div class="col-md-3">
+        <label for="tenTimKiem" class="form-label">Tìm Kiếm Theo Tên</label>
+        <input type="text" name="tenTimKiem" id="tenTimKiem" class="form-control" value="@Request.QueryString["tenTimKiem"]" />
+    </div>
+
+    <div class="col-md-12 d-flex justify-content-end">
+        <button type="submit" class="btn btn-primary" style="border-radius: 5px; box-shadow: 0 0 5px rgba(0,0,0,0.1);">Lọc</button>
+    </div>
+</form>
+
+<!-- Bảng danh sách hóa đơn -->
+<table class="table table-hover table-bordered mt-4">
+    <thead class="thead-dark">
+        <tr>
+            <th class="text-center" scope="col">Tên Người Dùng</th>
+            <th class="text-center" scope="col">Ngày Lập</th>
+            <th class="text-center" scope="col">Tổng Tiền</th>
+            <th class="text-center" scope="col">Trạng Thái</th>
+            <th class="text-center" scope="col">Hành Động</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td class="text-center">@item.TenNguoiDung</td>
+                <td class="text-center">@item.NgayLap</td>
+                <td class="text-end">@item.TongTien.ToString("N0")</td>
+                <td class="text-center">
+                    @if (item.TrangThai == "cho_xac_nhan")
+                    {
+                        <span class="badge bg-warning text-dark">Chờ Xác Nhận</span>
+                    }
+                    else if (item.TrangThai == "da_giao")
+                    {
+                        <span class="badge bg-success text-white">Đã Giao</span>
+                    }
+                </td>
+                <td class="text-center">
+                    @Html.ActionLink("Xem Chi Tiết", "Details", new { id = item.HoaDonId }, new { @class = "btn btn-info btn-sm" })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

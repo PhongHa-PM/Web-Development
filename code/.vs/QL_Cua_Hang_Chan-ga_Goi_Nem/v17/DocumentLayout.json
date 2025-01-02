@@ -1,0 +1,623 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5F86CB82-F943-40EC-B1A2-9034620B9ACC}|QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem.csproj|C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Controllers\\User_ctl\\Us_ProductController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F86CB82-F943-40EC-B1A2-9034620B9ACC}|QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem.csproj|solutionrelative:QL_Cua_Hang_Chan-ga_Goi_Nem\\Controllers\\User_ctl\\Us_ProductController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F86CB82-F943-40EC-B1A2-9034620B9ACC}|QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem.csproj|C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Controllers\\Admin_ctl\\Ad_OrderController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F86CB82-F943-40EC-B1A2-9034620B9ACC}|QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem.csproj|solutionrelative:QL_Cua_Hang_Chan-ga_Goi_Nem\\Controllers\\Admin_ctl\\Ad_OrderController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F86CB82-F943-40EC-B1A2-9034620B9ACC}|QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem.csproj|c:\\users\\tuan1\\documents\\l\u1EADp tr\u00ECnh web\\l\u1EADp tr\u00ECnh web th\u1EF1c s\u1EF1 final\\web final\\ql_cua_hang_chan-ga_goi_nem\\ql_cua_hang_chan-ga_goi_nem\\ql_cua_hang_chan-ga_goi_nem\\views\\ad_product\\createctsp.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5F86CB82-F943-40EC-B1A2-9034620B9ACC}|QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem.csproj|solutionrelative:ql_cua_hang_chan-ga_goi_nem\\views\\ad_product\\createctsp.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F86CB82-F943-40EC-B1A2-9034620B9ACC}|QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem.csproj|C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Ad_Product\\Create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5F86CB82-F943-40EC-B1A2-9034620B9ACC}|QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem.csproj|solutionrelative:QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Ad_Product\\Create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F86CB82-F943-40EC-B1A2-9034620B9ACC}|QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem.csproj|C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Controllers\\Admin_ctl\\Ad_ProductController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F86CB82-F943-40EC-B1A2-9034620B9ACC}|QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem.csproj|solutionrelative:QL_Cua_Hang_Chan-ga_Goi_Nem\\Controllers\\Admin_ctl\\Ad_ProductController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F86CB82-F943-40EC-B1A2-9034620B9ACC}|QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem.csproj|C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\ql_cua_hang_chan-ga_goi_nem\\controllers\\admin_ctl\\ad_servicescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F86CB82-F943-40EC-B1A2-9034620B9ACC}|QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem.csproj|solutionrelative:ql_cua_hang_chan-ga_goi_nem\\controllers\\admin_ctl\\ad_servicescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F86CB82-F943-40EC-B1A2-9034620B9ACC}|QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem.csproj|C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\ql_cua_hang_chan-ga_goi_nem\\views\\ad_services\\khuyenmaisp.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5F86CB82-F943-40EC-B1A2-9034620B9ACC}|QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem.csproj|solutionrelative:ql_cua_hang_chan-ga_goi_nem\\views\\ad_services\\khuyenmaisp.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F86CB82-F943-40EC-B1A2-9034620B9ACC}|QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem.csproj|C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Us_Product\\HienThiSanPhamChanGa.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5F86CB82-F943-40EC-B1A2-9034620B9ACC}|QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem.csproj|solutionrelative:QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Us_Product\\HienThiSanPhamChanGa.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F86CB82-F943-40EC-B1A2-9034620B9ACC}|QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem.csproj|C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\ql_cua_hang_chan-ga_goi_nem\\views\\ad_user\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5F86CB82-F943-40EC-B1A2-9034620B9ACC}|QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem.csproj|solutionrelative:ql_cua_hang_chan-ga_goi_nem\\views\\ad_user\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F86CB82-F943-40EC-B1A2-9034620B9ACC}|QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem.csproj|C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\ql_cua_hang_chan-ga_goi_nem\\controllers\\admin_ctl\\ad_usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F86CB82-F943-40EC-B1A2-9034620B9ACC}|QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem.csproj|solutionrelative:ql_cua_hang_chan-ga_goi_nem\\controllers\\admin_ctl\\ad_usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F86CB82-F943-40EC-B1A2-9034620B9ACC}|QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem.csproj|C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\DangNhap\\DangKy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5F86CB82-F943-40EC-B1A2-9034620B9ACC}|QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem.csproj|solutionrelative:QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\DangNhap\\DangKy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F86CB82-F943-40EC-B1A2-9034620B9ACC}|QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem.csproj|C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Models\\Admin_Md\\Product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F86CB82-F943-40EC-B1A2-9034620B9ACC}|QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem.csproj|solutionrelative:QL_Cua_Hang_Chan-ga_Goi_Nem\\Models\\Admin_Md\\Product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F86CB82-F943-40EC-B1A2-9034620B9ACC}|QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem.csproj|C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\ql_cua_hang_chan-ga_goi_nem\\views\\shared\\user_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5F86CB82-F943-40EC-B1A2-9034620B9ACC}|QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem.csproj|solutionrelative:ql_cua_hang_chan-ga_goi_nem\\views\\shared\\user_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F86CB82-F943-40EC-B1A2-9034620B9ACC}|QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem.csproj|C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Controllers\\DangNhapController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F86CB82-F943-40EC-B1A2-9034620B9ACC}|QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem.csproj|solutionrelative:QL_Cua_Hang_Chan-ga_Goi_Nem\\Controllers\\DangNhapController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F86CB82-F943-40EC-B1A2-9034620B9ACC}|QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem.csproj|C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Us_Product\\GioHang.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5F86CB82-F943-40EC-B1A2-9034620B9ACC}|QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem.csproj|solutionrelative:QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Us_Product\\GioHang.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F86CB82-F943-40EC-B1A2-9034620B9ACC}|QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem.csproj|C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Us_Product\\ChiTietSanPham.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5F86CB82-F943-40EC-B1A2-9034620B9ACC}|QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem.csproj|solutionrelative:QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Us_Product\\ChiTietSanPham.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F86CB82-F943-40EC-B1A2-9034620B9ACC}|QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem.csproj|C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\DangNhap\\DangNhap.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5F86CB82-F943-40EC-B1A2-9034620B9ACC}|QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem.csproj|solutionrelative:QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\DangNhap\\DangNhap.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F86CB82-F943-40EC-B1A2-9034620B9ACC}|QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem.csproj|C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Us_Order\\Index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5F86CB82-F943-40EC-B1A2-9034620B9ACC}|QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem.csproj|solutionrelative:QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Us_Order\\Index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F86CB82-F943-40EC-B1A2-9034620B9ACC}|QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem.csproj|C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\ql_cua_hang_chan-ga_goi_nem\\views\\ad_revenue\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5F86CB82-F943-40EC-B1A2-9034620B9ACC}|QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem.csproj|solutionrelative:ql_cua_hang_chan-ga_goi_nem\\views\\ad_revenue\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F86CB82-F943-40EC-B1A2-9034620B9ACC}|QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem.csproj|C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\ql_cua_hang_chan-ga_goi_nem\\controllers\\admin_ctl\\ad_revenuecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F86CB82-F943-40EC-B1A2-9034620B9ACC}|QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem.csproj|solutionrelative:ql_cua_hang_chan-ga_goi_nem\\controllers\\admin_ctl\\ad_revenuecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F86CB82-F943-40EC-B1A2-9034620B9ACC}|QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem.csproj|C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\ql_cua_hang_chan-ga_goi_nem\\views\\ad_user\\hienthinguoidung.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5F86CB82-F943-40EC-B1A2-9034620B9ACC}|QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem.csproj|solutionrelative:ql_cua_hang_chan-ga_goi_nem\\views\\ad_user\\hienthinguoidung.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F86CB82-F943-40EC-B1A2-9034620B9ACC}|QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem.csproj|C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Models\\User_Md\\SanPham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F86CB82-F943-40EC-B1A2-9034620B9ACC}|QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem.csproj|solutionrelative:QL_Cua_Hang_Chan-ga_Goi_Nem\\Models\\User_Md\\SanPham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F86CB82-F943-40EC-B1A2-9034620B9ACC}|QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem.csproj|C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Us_Product\\HienThiSanPhamNem.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5F86CB82-F943-40EC-B1A2-9034620B9ACC}|QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem.csproj|solutionrelative:QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Us_Product\\HienThiSanPhamNem.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F86CB82-F943-40EC-B1A2-9034620B9ACC}|QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem.csproj|C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Shared\\Admin_Layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5F86CB82-F943-40EC-B1A2-9034620B9ACC}|QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem.csproj|solutionrelative:QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Shared\\Admin_Layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F86CB82-F943-40EC-B1A2-9034620B9ACC}|QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem.csproj|C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Ad_Product\\HienThiSP.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5F86CB82-F943-40EC-B1A2-9034620B9ACC}|QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem.csproj|solutionrelative:QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Ad_Product\\HienThiSP.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F86CB82-F943-40EC-B1A2-9034620B9ACC}|QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem.csproj|C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Us_Search\\Search.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5F86CB82-F943-40EC-B1A2-9034620B9ACC}|QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem.csproj|solutionrelative:QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Us_Search\\Search.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F86CB82-F943-40EC-B1A2-9034620B9ACC}|QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem.csproj|C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Us_Product\\HienThiSanPhamGoi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5F86CB82-F943-40EC-B1A2-9034620B9ACC}|QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem.csproj|solutionrelative:QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Us_Product\\HienThiSanPhamGoi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F86CB82-F943-40EC-B1A2-9034620B9ACC}|QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem.csproj|C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Ad_Order\\Details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5F86CB82-F943-40EC-B1A2-9034620B9ACC}|QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem.csproj|solutionrelative:QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Ad_Order\\Details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F86CB82-F943-40EC-B1A2-9034620B9ACC}|QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem.csproj|C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Ad_Product\\EditCTSP.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5F86CB82-F943-40EC-B1A2-9034620B9ACC}|QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem.csproj|solutionrelative:QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Ad_Product\\EditCTSP.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F86CB82-F943-40EC-B1A2-9034620B9ACC}|QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem.csproj|C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Ad_Product\\HienThiChiTietSanPham.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5F86CB82-F943-40EC-B1A2-9034620B9ACC}|QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem.csproj|solutionrelative:QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Ad_Product\\HienThiChiTietSanPham.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F86CB82-F943-40EC-B1A2-9034620B9ACC}|QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem.csproj|C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Ad_Services\\EditKhuyenMai.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5F86CB82-F943-40EC-B1A2-9034620B9ACC}|QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem.csproj|solutionrelative:QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Ad_Services\\EditKhuyenMai.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F86CB82-F943-40EC-B1A2-9034620B9ACC}|QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem.csproj|C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Us_Product\\ThanhToan.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5F86CB82-F943-40EC-B1A2-9034620B9ACC}|QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem.csproj|solutionrelative:QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Us_Product\\ThanhToan.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F86CB82-F943-40EC-B1A2-9034620B9ACC}|QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem.csproj|C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\DangNhap\\SuaThongTinTaiKhoan.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5F86CB82-F943-40EC-B1A2-9034620B9ACC}|QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem.csproj|solutionrelative:QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\DangNhap\\SuaThongTinTaiKhoan.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F86CB82-F943-40EC-B1A2-9034620B9ACC}|QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem.csproj|C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\DangNhap\\ThongTinTaiKhoan.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5F86CB82-F943-40EC-B1A2-9034620B9ACC}|QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem.csproj|solutionrelative:QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\DangNhap\\ThongTinTaiKhoan.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F86CB82-F943-40EC-B1A2-9034620B9ACC}|QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem.csproj|C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Us_Order\\ChiTietHoaDon.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5F86CB82-F943-40EC-B1A2-9034620B9ACC}|QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem.csproj|solutionrelative:QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Us_Order\\ChiTietHoaDon.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F86CB82-F943-40EC-B1A2-9034620B9ACC}|QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem.csproj|C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Ad_Product\\Edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5F86CB82-F943-40EC-B1A2-9034620B9ACC}|QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem.csproj|solutionrelative:QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Ad_Product\\Edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F86CB82-F943-40EC-B1A2-9034620B9ACC}|QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem.csproj|C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\App_Start\\RouteConfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F86CB82-F943-40EC-B1A2-9034620B9ACC}|QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem.csproj|solutionrelative:QL_Cua_Hang_Chan-ga_Goi_Nem\\App_Start\\RouteConfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 218,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 13,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Ad_Product\\Create.cshtml",
+              "RelativeDocumentMoniker": "QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Ad_Product\\Create.cshtml",
+              "ToolTip": "C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Ad_Product\\Create.cshtml",
+              "RelativeToolTip": "QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Ad_Product\\Create.cshtml",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAYwJoAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-08T12:03:12.128Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Ad_UserController.cs",
+              "DocumentMoniker": "C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Controllers\\Admin_ctl\\Ad_UserController.cs",
+              "RelativeDocumentMoniker": "QL_Cua_Hang_Chan-ga_Goi_Nem\\Controllers\\Admin_ctl\\Ad_UserController.cs",
+              "ToolTip": "C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Controllers\\Admin_ctl\\Ad_UserController.cs",
+              "RelativeToolTip": "QL_Cua_Hang_Chan-ga_Goi_Nem\\Controllers\\Admin_ctl\\Ad_UserController.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAQwEsAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T07:42:48.535Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Ad_User\\Create.cshtml",
+              "RelativeDocumentMoniker": "QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Ad_User\\Create.cshtml",
+              "ToolTip": "C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Ad_User\\Create.cshtml",
+              "RelativeToolTip": "QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Ad_User\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-10T07:43:28.757Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "DangKy.cshtml",
+              "DocumentMoniker": "C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\DangNhap\\DangKy.cshtml",
+              "RelativeDocumentMoniker": "QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\DangNhap\\DangKy.cshtml",
+              "ToolTip": "C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\DangNhap\\DangKy.cshtml",
+              "RelativeToolTip": "QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\DangNhap\\DangKy.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEoAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-08T09:38:54.998Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Models\\Admin_Md\\Product.cs",
+              "RelativeDocumentMoniker": "QL_Cua_Hang_Chan-ga_Goi_Nem\\Models\\Admin_Md\\Product.cs",
+              "ToolTip": "C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Models\\Admin_Md\\Product.cs",
+              "RelativeToolTip": "QL_Cua_Hang_Chan-ga_Goi_Nem\\Models\\Admin_Md\\Product.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-09T02:41:07.192Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Ad_ProductController.cs",
+              "DocumentMoniker": "C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Controllers\\Admin_ctl\\Ad_ProductController.cs",
+              "RelativeDocumentMoniker": "QL_Cua_Hang_Chan-ga_Goi_Nem\\Controllers\\Admin_ctl\\Ad_ProductController.cs",
+              "ToolTip": "C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Controllers\\Admin_ctl\\Ad_ProductController.cs",
+              "RelativeToolTip": "QL_Cua_Hang_Chan-ga_Goi_Nem\\Controllers\\Admin_ctl\\Ad_ProductController.cs",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAYwGgAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-08T17:51:31.411Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Ad_ServicesController.cs",
+              "DocumentMoniker": "C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Controllers\\Admin_ctl\\Ad_ServicesController.cs",
+              "RelativeDocumentMoniker": "QL_Cua_Hang_Chan-ga_Goi_Nem\\Controllers\\Admin_ctl\\Ad_ServicesController.cs",
+              "ToolTip": "C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Controllers\\Admin_ctl\\Ad_ServicesController.cs",
+              "RelativeToolTip": "QL_Cua_Hang_Chan-ga_Goi_Nem\\Controllers\\Admin_ctl\\Ad_ServicesController.cs",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAwwFgAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T07:58:52.556Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "User_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Shared\\User_Layout.cshtml",
+              "RelativeDocumentMoniker": "QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Shared\\User_Layout.cshtml",
+              "ToolTip": "C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Shared\\User_Layout.cshtml",
+              "RelativeToolTip": "QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Shared\\User_Layout.cshtml",
+              "ViewState": "AgIAAG8AAAAAAAAAAAAAAJQAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-08T09:05:55.476Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "DangNhapController.cs",
+              "DocumentMoniker": "C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Controllers\\DangNhapController.cs",
+              "RelativeDocumentMoniker": "QL_Cua_Hang_Chan-ga_Goi_Nem\\Controllers\\DangNhapController.cs",
+              "ToolTip": "C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Controllers\\DangNhapController.cs",
+              "RelativeToolTip": "QL_Cua_Hang_Chan-ga_Goi_Nem\\Controllers\\DangNhapController.cs",
+              "ViewState": "AgIAAIkAAAAAAAAAAAAwwI4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-08T09:48:24.153Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CreateCTSP.cshtml",
+              "DocumentMoniker": "C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Ad_Product\\CreateCTSP.cshtml",
+              "RelativeDocumentMoniker": "QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Ad_Product\\CreateCTSP.cshtml",
+              "ToolTip": "C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Ad_Product\\CreateCTSP.cshtml",
+              "RelativeToolTip": "QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Ad_Product\\CreateCTSP.cshtml",
+              "ViewState": "AgIAANgAAAAAAAAAAAAYwO0AAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-08T04:48:20.578Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "GioHang.cshtml",
+              "DocumentMoniker": "C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Us_Product\\GioHang.cshtml",
+              "RelativeDocumentMoniker": "QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Us_Product\\GioHang.cshtml",
+              "ToolTip": "C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Us_Product\\GioHang.cshtml",
+              "RelativeToolTip": "QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Us_Product\\GioHang.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-08T10:54:32.069Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Us_ProductController.cs",
+              "DocumentMoniker": "C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Controllers\\User_ctl\\Us_ProductController.cs",
+              "RelativeDocumentMoniker": "QL_Cua_Hang_Chan-ga_Goi_Nem\\Controllers\\User_ctl\\Us_ProductController.cs",
+              "ToolTip": "C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Controllers\\User_ctl\\Us_ProductController.cs",
+              "RelativeToolTip": "QL_Cua_Hang_Chan-ga_Goi_Nem\\Controllers\\User_ctl\\Us_ProductController.cs",
+              "ViewState": "AgIAAAsBAAAAAAAAAAAYwBcBAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-08T10:46:52.238Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ChiTietSanPham.cshtml",
+              "DocumentMoniker": "C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Us_Product\\ChiTietSanPham.cshtml",
+              "RelativeDocumentMoniker": "QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Us_Product\\ChiTietSanPham.cshtml",
+              "ToolTip": "C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Us_Product\\ChiTietSanPham.cshtml",
+              "RelativeToolTip": "QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Us_Product\\ChiTietSanPham.cshtml",
+              "ViewState": "AgIAAG8AAAAAAAAAAAAAAIAAAACoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-08T09:22:15.543Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "KhuyenMaiSP.cshtml",
+              "DocumentMoniker": "C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Ad_Services\\KhuyenMaiSP.cshtml",
+              "RelativeDocumentMoniker": "QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Ad_Services\\KhuyenMaiSP.cshtml",
+              "ToolTip": "C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Ad_Services\\KhuyenMaiSP.cshtml",
+              "RelativeToolTip": "QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Ad_Services\\KhuyenMaiSP.cshtml",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAAAB0AAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-10T11:13:16.162Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "DangNhap.cshtml",
+              "DocumentMoniker": "C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\DangNhap\\DangNhap.cshtml",
+              "RelativeDocumentMoniker": "QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\DangNhap\\DangNhap.cshtml",
+              "ToolTip": "C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\DangNhap\\DangNhap.cshtml",
+              "RelativeToolTip": "QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\DangNhap\\DangNhap.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-08T09:30:15.946Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Us_Order\\Index.cshtml",
+              "RelativeDocumentMoniker": "QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Us_Order\\Index.cshtml",
+              "ToolTip": "C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Us_Order\\Index.cshtml",
+              "RelativeToolTip": "QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Us_Order\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-08T09:44:12.828Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Ad_Revenue\\Index.cshtml",
+              "RelativeDocumentMoniker": "QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Ad_Revenue\\Index.cshtml",
+              "ToolTip": "C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Ad_Revenue\\Index.cshtml",
+              "RelativeToolTip": "QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Ad_Revenue\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADIAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-10T07:58:49.299Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Ad_RevenueController.cs",
+              "DocumentMoniker": "C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Controllers\\Admin_ctl\\Ad_RevenueController.cs",
+              "RelativeDocumentMoniker": "QL_Cua_Hang_Chan-ga_Goi_Nem\\Controllers\\Admin_ctl\\Ad_RevenueController.cs",
+              "ToolTip": "C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Controllers\\Admin_ctl\\Ad_RevenueController.cs",
+              "RelativeToolTip": "QL_Cua_Hang_Chan-ga_Goi_Nem\\Controllers\\Admin_ctl\\Ad_RevenueController.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAA4wDUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T07:58:53.245Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "HienThiNguoiDung.cshtml",
+              "DocumentMoniker": "C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Ad_User\\HienThiNguoiDung.cshtml",
+              "RelativeDocumentMoniker": "QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Ad_User\\HienThiNguoiDung.cshtml",
+              "ToolTip": "C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Ad_User\\HienThiNguoiDung.cshtml",
+              "RelativeToolTip": "QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Ad_User\\HienThiNguoiDung.cshtml",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAAEcAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-10T07:42:56.932Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "HienThiSanPhamGoi.cshtml",
+              "DocumentMoniker": "C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Us_Product\\HienThiSanPhamGoi.cshtml",
+              "RelativeDocumentMoniker": "QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Us_Product\\HienThiSanPhamGoi.cshtml",
+              "ToolTip": "C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Us_Product\\HienThiSanPhamGoi.cshtml",
+              "RelativeToolTip": "QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Us_Product\\HienThiSanPhamGoi.cshtml",
+              "ViewState": "AgIAAMMAAAAAAAAAAAAAAM0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-08T10:59:31.43Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "HienThiSanPhamChanGa.cshtml",
+              "DocumentMoniker": "C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Us_Product\\HienThiSanPhamChanGa.cshtml",
+              "RelativeDocumentMoniker": "QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Us_Product\\HienThiSanPhamChanGa.cshtml",
+              "ToolTip": "C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Us_Product\\HienThiSanPhamChanGa.cshtml",
+              "RelativeToolTip": "QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Us_Product\\HienThiSanPhamChanGa.cshtml",
+              "ViewState": "AgIAAGkAAAAAAAAAAAAAAHcAAABiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-08T10:57:54.107Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "SanPham.cs",
+              "DocumentMoniker": "C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Models\\User_Md\\SanPham.cs",
+              "RelativeDocumentMoniker": "QL_Cua_Hang_Chan-ga_Goi_Nem\\Models\\User_Md\\SanPham.cs",
+              "ToolTip": "C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Models\\User_Md\\SanPham.cs",
+              "RelativeToolTip": "QL_Cua_Hang_Chan-ga_Goi_Nem\\Models\\User_Md\\SanPham.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAA8wCgAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-08T10:48:14.589Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "HienThiSanPhamNem.cshtml",
+              "DocumentMoniker": "C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Us_Product\\HienThiSanPhamNem.cshtml",
+              "RelativeDocumentMoniker": "QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Us_Product\\HienThiSanPhamNem.cshtml",
+              "ToolTip": "C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Us_Product\\HienThiSanPhamNem.cshtml",
+              "RelativeToolTip": "QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Us_Product\\HienThiSanPhamNem.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-08T09:21:31.717Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Search.cshtml",
+              "DocumentMoniker": "C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Us_Search\\Search.cshtml",
+              "RelativeDocumentMoniker": "QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Us_Search\\Search.cshtml",
+              "ToolTip": "C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Us_Search\\Search.cshtml",
+              "RelativeToolTip": "QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Us_Search\\Search.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAH4AAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-08T11:49:27.158Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "HienThiSP.cshtml",
+              "DocumentMoniker": "C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Ad_Product\\HienThiSP.cshtml",
+              "RelativeDocumentMoniker": "QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Ad_Product\\HienThiSP.cshtml",
+              "ToolTip": "C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Ad_Product\\HienThiSP.cshtml",
+              "RelativeToolTip": "QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Ad_Product\\HienThiSP.cshtml",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAgwEoAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-08T11:55:58.848Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Admin_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Shared\\Admin_Layout.cshtml",
+              "RelativeDocumentMoniker": "QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Shared\\Admin_Layout.cshtml",
+              "ToolTip": "C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Shared\\Admin_Layout.cshtml",
+              "RelativeToolTip": "QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Shared\\Admin_Layout.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABoAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-08T12:02:46.999Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Ad_OrderController.cs",
+              "DocumentMoniker": "C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Controllers\\Admin_ctl\\Ad_OrderController.cs",
+              "RelativeDocumentMoniker": "QL_Cua_Hang_Chan-ga_Goi_Nem\\Controllers\\Admin_ctl\\Ad_OrderController.cs",
+              "ToolTip": "C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Controllers\\Admin_ctl\\Ad_OrderController.cs",
+              "RelativeToolTip": "QL_Cua_Hang_Chan-ga_Goi_Nem\\Controllers\\Admin_ctl\\Ad_OrderController.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAQwGQAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-09T01:54:43.628Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Ad_Order\\Details.cshtml",
+              "RelativeDocumentMoniker": "QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Ad_Order\\Details.cshtml",
+              "ToolTip": "C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Ad_Order\\Details.cshtml",
+              "RelativeToolTip": "QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Ad_Order\\Details.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAB0AAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-09T09:17:50.532Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "EditCTSP.cshtml",
+              "DocumentMoniker": "C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Ad_Product\\EditCTSP.cshtml",
+              "RelativeDocumentMoniker": "QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Ad_Product\\EditCTSP.cshtml",
+              "ToolTip": "C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Ad_Product\\EditCTSP.cshtml",
+              "RelativeToolTip": "QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Ad_Product\\EditCTSP.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-09T09:29:53.733Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "HienThiChiTietSanPham.cshtml",
+              "DocumentMoniker": "C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Ad_Product\\HienThiChiTietSanPham.cshtml",
+              "RelativeDocumentMoniker": "QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Ad_Product\\HienThiChiTietSanPham.cshtml",
+              "ToolTip": "C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Ad_Product\\HienThiChiTietSanPham.cshtml",
+              "RelativeToolTip": "QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Ad_Product\\HienThiChiTietSanPham.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAABwAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-09T09:33:47.306Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "EditKhuyenMai.cshtml",
+              "DocumentMoniker": "C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Ad_Services\\EditKhuyenMai.cshtml",
+              "RelativeDocumentMoniker": "QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Ad_Services\\EditKhuyenMai.cshtml",
+              "ToolTip": "C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Ad_Services\\EditKhuyenMai.cshtml",
+              "RelativeToolTip": "QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Ad_Services\\EditKhuyenMai.cshtml",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAAGIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-09T10:18:07.13Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "ThanhToan.cshtml",
+              "DocumentMoniker": "C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Us_Product\\ThanhToan.cshtml",
+              "RelativeDocumentMoniker": "QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Us_Product\\ThanhToan.cshtml",
+              "ToolTip": "C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Us_Product\\ThanhToan.cshtml",
+              "RelativeToolTip": "QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Us_Product\\ThanhToan.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAB4AAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-08T10:30:16.596Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "SuaThongTinTaiKhoan.cshtml",
+              "DocumentMoniker": "C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\DangNhap\\SuaThongTinTaiKhoan.cshtml",
+              "RelativeDocumentMoniker": "QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\DangNhap\\SuaThongTinTaiKhoan.cshtml",
+              "ToolTip": "C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\DangNhap\\SuaThongTinTaiKhoan.cshtml",
+              "RelativeToolTip": "QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\DangNhap\\SuaThongTinTaiKhoan.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACEAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-08T09:54:51.49Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "ThongTinTaiKhoan.cshtml",
+              "DocumentMoniker": "C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\DangNhap\\ThongTinTaiKhoan.cshtml",
+              "RelativeDocumentMoniker": "QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\DangNhap\\ThongTinTaiKhoan.cshtml",
+              "ToolTip": "C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\DangNhap\\ThongTinTaiKhoan.cshtml",
+              "RelativeToolTip": "QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\DangNhap\\ThongTinTaiKhoan.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-08T09:46:48.204Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "ChiTietHoaDon.cshtml",
+              "DocumentMoniker": "C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Us_Order\\ChiTietHoaDon.cshtml",
+              "RelativeDocumentMoniker": "QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Us_Order\\ChiTietHoaDon.cshtml",
+              "ToolTip": "C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Us_Order\\ChiTietHoaDon.cshtml",
+              "RelativeToolTip": "QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Us_Order\\ChiTietHoaDon.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAACcAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-08T09:40:58.435Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Ad_Product\\Edit.cshtml",
+              "RelativeDocumentMoniker": "QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Ad_Product\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Ad_Product\\Edit.cshtml",
+              "RelativeToolTip": "QL_Cua_Hang_Chan-ga_Goi_Nem\\Views\\Ad_Product\\Edit.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAABEAAABuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-08T04:48:10.065Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "RouteConfig.cs",
+              "DocumentMoniker": "C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\App_Start\\RouteConfig.cs",
+              "RelativeDocumentMoniker": "QL_Cua_Hang_Chan-ga_Goi_Nem\\App_Start\\RouteConfig.cs",
+              "ToolTip": "C:\\Users\\tuan1\\Documents\\L\u1EADp Tr\u00ECnh Web\\L\u1EADp Tr\u00ECnh Web th\u1EF1c s\u1EF1 final\\Web final\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\QL_Cua_Hang_Chan-ga_Goi_Nem\\App_Start\\RouteConfig.cs",
+              "RelativeToolTip": "QL_Cua_Hang_Chan-ga_Goi_Nem\\App_Start\\RouteConfig.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-08T09:03:10.57Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

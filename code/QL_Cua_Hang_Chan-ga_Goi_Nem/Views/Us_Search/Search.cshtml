@@ -1,0 +1,245 @@
+﻿@model List<QL_Cua_Hang_Chan_ga_Goi_Nem.Models.User_Md.SanPham>
+@{
+    ViewBag.Title = "Search";
+    Layout = "~/Views/Shared/User_Layout.cshtml";
+}
+
+<div class="container mt-4">
+    <h3 class="text-primary">Kết quả tìm kiếm cho: "@Request["TimKiem"]"</h3>
+    <div class="row">
+        @foreach (var product in Model)
+        {
+            <a class="col-6 col-lg-3" href="@Url.Action("ChiTietSanPham", "Us_Product", new { id = product.SanPhamId })" style="text-decoration:none;">
+                <div class="mb-4">
+                    <div class="product-card position-relative border rounded shadow-sm">
+                        <!-- Discount Percentage Label -->
+                        @if (product.GiamGia != null && product.GiamGia != 0)
+                        {
+                            <div class="discount-label">-@product.GiamGia.ToString("N0")%</div>
+                        }
+                        <!-- Product Image -->
+                        <div class="product-img mb-2">
+                            <img style="width: 100%; height: 100%;" src="~/Content/Hinh_Anh/@product.HinhAnh" alt="@product.HinhAnh">
+                        </div>
+                        <div class="p-3 card-content">
+                            <div class="d-flex align-items-center">
+                                <span>@product.DanhGiaTrungBinh/5</span>
+                                <i class='bx bxs-star text-warning ms-1'></i>
+                                <span>(@product.SoLuongDanhGia)</span>
+                            </div>
+                            <p class="fw-bold mt-2 name-product">@product.TenSanPham</p>
+                            <span class="text-danger fw-bold">
+                                @if (product.GiaKhuyenMai == product.Gia)
+                                {
+                                    @product.GiaKhuyenMai.ToString("N0")
+                                }
+                                else
+                                {
+                                    @product.GiaKhuyenMai.ToString("N0") <!-- Hiển thị giá khuyến mãi -->
+                                    <span class="text-muted text-decoration-line-through small">
+                                        @product.Gia.ToString("N0")<!-- Hiển thị giá gốc, gạch ngang -->
+                                    </span>
+                                }
+                            </span>
+
+                            <p class="mt-1">@product.SoLuongKichThuoc Kích Thước</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        }
+    </div>
+</div>
+
+<style>
+    /* Tổng thể */
+    body {
+        font-family: 'Arial', sans-serif;
+        color: #333;
+        background-color: #f9f9f9;
+    }
+
+    /* Header hình ảnh */
+    .img-top {
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 250px;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Bộ lọc sản phẩm */
+    .filter-section {
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 15px;
+        margin-bottom: 20px;
+    }
+
+        .filter-section h6 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #555;
+        }
+
+        .filter-section .form-check-label {
+            font-size: 1rem;
+            color: #666;
+            cursor: pointer;
+        }
+
+        .filter-section .form-check-input {
+            accent-color: #007bff;
+        }
+
+    /* Nút áp dụng bộ lọc */
+    .btn-primary {
+        background-color: #28a745;
+        border-color: #28a745;
+        font-size: 1rem;
+        font-weight: bold;
+        transition: background-color 0.3s, transform 0.2s;
+    }
+
+        .btn-primary:hover {
+            background-color: #218838;
+            border-color: #1e7e34;
+            transform: scale(1.05);
+        }
+
+    /* Nội dung sản phẩm */
+    .product-card {
+        transition: transform 0.3s ease, box-shadow 0.3s;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        background-color: #fff;
+        overflow: hidden;
+        cursor: pointer;
+    }
+
+        .product-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+    .product-img {
+        width: 100%;
+        height: 300px;
+        background-color: #f0f0f0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+        .product-img img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            border-radius: 8px 8px 0 0;
+        }
+
+    .card-content {
+        padding: 15px;
+    }
+
+    .name-product {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #222;
+        margin-bottom: 5px;
+    }
+
+    .card-content .text-danger {
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+
+    .card-content .text-muted {
+        font-size: 0.9rem;
+        margin-left: 10px;
+    }
+
+    .card-content p {
+        margin: 5px 0;
+        font-size: 0.95rem;
+        color: #555;
+    }
+
+    /* Label giảm giá */
+    .discount-label {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background-color: #ff4d4d;
+        color: #fff;
+        font-size: 0.85rem;
+        font-weight: bold;
+        padding: 8px 12px;
+        border-radius: 50px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Dropdown sắp xếp */
+    .dropdown-toggle {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        color: #333;
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        border-radius: 5px;
+        transition: background-color 0.3s, box-shadow 0.3s;
+    }
+
+        .dropdown-toggle:hover {
+            background-color: #f0f0f0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+    .dropdown-menu {
+        border-radius: 8px;
+        border: 1px solid #ddd;
+    }
+
+        .dropdown-menu .dropdown-item {
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: #333;
+        }
+
+            .dropdown-menu .dropdown-item:hover {
+                background-color: #f8f9fa;
+            }
+
+    /* Nội dung mở rộng trong bộ lọc */
+    .expandable-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+
+        .expandable-content.active {
+            max-height: 500px;
+        }
+
+    /* Nút toggle */
+    .toggle-button {
+        background: none;
+        border: none;
+        color: #007bff;
+        cursor: pointer;
+    }
+
+        .toggle-button i {
+            font-size: 1.2rem;
+            transition: transform 0.3s;
+        }
+
+            .toggle-button i.bx-chevron-up {
+                transform: rotate(180deg);
+            }
+</style>

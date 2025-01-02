@@ -1,0 +1,100 @@
+﻿@model QL_Cua_Hang_Chan_ga_Goi_Nem.Models.User_Md.HoaDonViewModel
+@{
+    ViewBag.Title = "Thanh Toán";
+    Layout = "~/Views/Shared/User_Layout.cshtml";
+}
+
+<div class="container my-5">
+    <h2 class="text-center text-primary mb-4">Thông tin Thanh Toán</h2>
+
+    <form method="post" action="@Url.Action("XLThanhToan", "Us_Product")" class="shadow p-4 rounded bg-light">
+        <!-- Địa chỉ giao hàng -->
+        <div class="mb-3">
+            <label for="DiaChiGiaoHang" class="form-label">Địa chỉ giao hàng</label>
+            <input type="text" id="DiaChiGiaoHang" name="DiaChiGiaoHang"
+                   class="form-control"
+                   placeholder="Nhập địa chỉ giao hàng"
+                   value="@Model.DiaChiGiaoHang" required />
+        </div>
+        <div class="mb-3">
+            <label for="TenKhachHang" class="form-label">Tên Khách Hàng</label>
+            <input type="text" id="TenKhachHang" name="TenKhachHang"
+                   class="form-control"
+                   placeholder="Nhập địa chỉ giao hàng"
+                   value="@Model.TenKhachHang" required />
+        </div>
+        <div class="mb-3">
+            <label for="TenKhachHang" class="form-label">Số Điện Thoại</label>
+            <input type="text" id="SoDienThoai" name="SoDienThoai"
+                   class="form-control"
+                   placeholder="Nhập địa chỉ giao hàng"
+                   value="@Model.SoDienThoai" required />
+        </div>
+
+        <!-- Xác nhận thanh toán -->
+        <div class="table-responsive mt-4">
+            <h3 class="text-secondary">Xác nhận sản phẩm</h3>
+            <table class="table table-hover align-middle">
+                <thead class="table-primary">
+                    <tr>
+                        <th style="max-width:300px" scope="col">Hình ảnh</th>
+                        <th style="max-width:300px" scope="col">Tên sản phẩm</th>
+                        <th scope="col">Kích thước</th>
+                        <th scope="col">Màu sắc</th>
+                        <th scope="col">Độ dày</th>
+                        <th scope="col">Giá</th>
+                        <th scope="col">Số lượng</th>
+                        <th scope="col">Thành tiền</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.GioHang)
+                    {
+                        <tr>
+                            <td>
+                                <img src="@Url.Content("~/Content/Hinh_Anh/" + item.HinhAnh)"
+                                     alt="@item.TenSanPham"
+                                     class="img-thumbnail"
+                                     style="width: 50px; height: auto;" />
+                            </td>
+                            <td>@item.TenSanPham</td>
+                            <td>@item.KichThuoc</td>
+                            <td>@item.MauSac</td>
+                            <td>@item.DoDay</td>
+                            <td>@item.Gia.ToString("N0") đ</td>
+                            <td>@item.SoLuong</td>
+                            <td>@item.ThanhTien.ToString("N0") đ</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            <h4 class="text-end mt-3">Tổng cộng: <span class="text-danger">@Model.TongTien.ToString("N0") đ</span></h4>
+        </div>
+
+        <!-- Nút xác nhận -->
+        <div class="text-center mt-4">
+            <button type="submit" class="btn btn-success px-4 py-2">Xác nhận thanh toán</button>
+        </div>
+    </form>
+</div>
+<style>
+    h2 {
+        font-family: 'Arial', sans-serif;
+        font-weight: bold;
+    }
+
+    .table-hover tbody tr:hover {
+        background-color: #f9f9f9;
+    }
+
+    .btn-success {
+        background-color: #28a745;
+        border: none;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+        .btn-success:hover {
+            background-color: #218838;
+        }
+
+</style>

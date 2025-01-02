@@ -1,0 +1,252 @@
+﻿@model QL_Cua_Hang_Chan_ga_Goi_Nem.Models.chi_tiet_san_pham
+
+@{
+    ViewBag.Title = "Thêm mới chi tiết sản phẩm";
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+
+<div class="container">
+    <h2 class="text-center mb-4">Thêm mới cho sản phẩm</h2>
+
+    <p>Sản phẩm ID: <strong>@ViewBag.SanPhamId</strong></p>
+
+    @using (Html.BeginForm("CreateCTSP", "Ad_Product", FormMethod.Post, new { @class = "form" }))
+    {
+        <!-- Trường ẩn cho san_pham_id -->
+        @Html.HiddenFor(model => model.san_pham_id)
+
+        <!-- Kích thước -->
+        <div class="coolinput">
+            <label for="kich_thuoc" class="text">Kích thước</label>
+            @Html.DropDownList("kich_thuoc", new SelectList(ViewBag.KichThuocList as IEnumerable<string>), "Chọn kích thước", new { @class = "form-control", id = "kich_thuoc" })
+            <input type="text" class="form-control mt-2" name="kich_thuoc_new" placeholder="Hoặc nhập kích thước mới" />
+        </div>
+
+        <!-- Độ dày -->
+        <div class="coolinput">
+            <label for="do_day" class="text">Độ dày</label>
+            @Html.EditorFor(model => model.do_day, new { @class = "input form-control", id = "do_day" })
+        </div>
+
+        <!-- Màu sắc -->
+        <div class="coolinput">
+            <label for="mau_sac" class="text">Màu sắc</label>
+            @Html.DropDownList("mau_sac", new SelectList(ViewBag.MauSacList as IEnumerable<string>), "Chọn màu sắc", new { @class = "form-control", id = "mau_sac" })
+            <input type="text" class="form-control mt-2" name="mau_sac_new" placeholder="Hoặc nhập màu sắc mới" />
+        </div>
+
+        <!-- Chất liệu -->
+        <div class="coolinput">
+            <label for="chat_lieu" class="text">Chất liệu</label>
+            @Html.DropDownList("chat_lieu", new SelectList(ViewBag.ChatLieuList as IEnumerable<string>), "Chọn chất liệu", new { @class = "form-control", id = "chat_lieu" })
+            <input type="text" class="form-control mt-2" name="chat_lieu_new" placeholder="Hoặc nhập chất liệu mới" />
+        </div>
+
+        <!-- Giá -->
+        <div class="coolinput">
+            <label for="gia" class="text">Giá</label>
+            @Html.TextBoxFor(model => model.gia, new { @class = "input form-control", id = "gia", type = "number", step = "any" })
+        </div>
+
+        <!-- Số lượng tồn -->
+        <div class="coolinput">
+            <label for="so_luong_ton" class="text">Số lượng tồn</label>
+            @Html.EditorFor(model => model.so_luong_ton, new { @class = "input form-control", id = "so_luong_ton" })
+        </div>
+
+        <!-- Nút lưu -->
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary">Lưu</button>
+        </div>
+    }
+</div>
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script>
+        $(document).ready(function () {
+            // Kiểm tra định dạng kích thước
+            $('#kich_thuoc').on('input', function () {
+                const value = $(this).val();
+                const regex = /^\d+x\d+$/; // Định dạng "số'x'số"
+                if (!regex.test(value)) {
+                    $(this).addClass('is-invalid');
+                    $(this).next('.invalid-feedback').remove();
+                    $(this).after('<div class="invalid-feedback">Kích thước phải có dạng số\'x\'số, ví dụ: 100x200.</div>');
+                } else {
+                    $(this).removeClass('is-invalid');
+                    $(this).next('.invalid-feedback').remove();
+                }
+            });
+
+            // Kiểm tra giá trị giá
+            $('#gia').on('input', function () {
+                const value = parseFloat($(this).val());
+                if (value > 100000000) {
+                    $(this).addClass('is-invalid');
+                    $(this).next('.invalid-feedback').remove();
+                    $(this).after('<div class="invalid-feedback">Giá không được vượt quá 100.000.000.</div>');
+                } else {
+                    $(this).removeClass('is-invalid');
+                    $(this).next('.invalid-feedback').remove();
+                }
+            });
+
+            // Kiểm tra trước khi submit
+            $('form').on('submit', function (e) {
+                let isValid = true;
+
+                // Kiểm tra kích thước
+                const kichThuoc = $('#kich_thuoc').val();
+                const regex = /^\d+x\d+$/;
+                if (!regex.test(kichThuoc)) {
+                    isValid = false;
+                    $('#kich_thuoc').addClass('is-invalid');
+                    $('#kich_thuoc').next('.invalid-feedback').remove();
+                    $('#kich_thuoc').after('<div class="invalid-feedback">Kích thước phải có dạng số\'x\'số, ví dụ: 100x200.</div>');
+                }
+
+                // Kiểm tra giá
+                const gia = parseFloat($('#gia').val());
+                if (gia > 100000000) {
+                    isValid = false;
+                    $('#gia').addClass('is-invalid');
+                    $('#gia').next('.invalid-feedback').remove();
+                    $('#gia').after('<div class="invalid-feedback">Giá không được vượt quá 100.000.000.</div>');
+                }
+
+                if (!isValid) {
+                    e.preventDefault(); // Ngăn form submit nếu không hợp lệ
+                }
+            });
+        });
+    </script>
+}
+
+
+<style>
+    /* Loại bỏ border và outline của input */
+    input, textarea, select {
+        border: none;
+        outline: none;
+    }
+
+    /* General Form Layout */
+    .container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 30px;
+    }
+
+    h2 {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 30px;
+    }
+
+    /* Form Input Styling */
+    .coolinput {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+        .coolinput label.text {
+            font-size: 1rem;
+            color: #333;
+            font-weight: 600;
+            position: relative;
+            margin-bottom: 5px;
+            padding: 0 5px;
+            background: #f5f5f5;
+            width: fit-content;
+        }
+
+        .coolinput input.input {
+            padding: 12px 10px;
+            font-size: 1rem;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            background: #fafafa;
+            transition: border 0.3s ease;
+        }
+
+            .coolinput input.input:focus {
+                outline: none;
+                border-color: #007bff;
+            }
+
+            .coolinput input.input::placeholder {
+                color: #888;
+            }
+
+    /* Button Styling */
+    .btn-primary {
+        padding: 10px 20px;
+        font-size: 1.1rem;
+        border-radius: 5px;
+        background-color: #007bff;
+        border: 1px solid #007bff;
+        transition: background-color 0.3s;
+    }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+
+    /* Section Spacing */
+    .mb-4 {
+        margin-bottom: 30px;
+    }
+
+    /* General Form Layout */
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    label {
+        font-size: 1.1rem;
+        color: #333;
+        margin-bottom: 5px;
+    }
+
+    .form-control,
+    input,
+    textarea,
+    select {
+        border-radius: 5px;
+        border: 0.5px solid #ccc;
+        padding: 10px;
+        font-size: 1rem;
+        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+        /* File Input Styling */
+        input[type="file"] {
+            padding: 10px;
+        }
+
+    /* Text Center */
+    .text-center {
+        text-align: center;
+    }
+
+    /* Custom Input Fields */
+    .coolinput input.input {
+        padding: 12px 10px;
+        font-size: 1rem;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+        background: #fafafa;
+        transition: border 0.3s ease;
+    }
+
+        .coolinput input.input:focus {
+            outline: none;
+            border-color: #007bff;
+        }
+</style>

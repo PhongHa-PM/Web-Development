@@ -1,0 +1,140 @@
+﻿@model QL_Cua_Hang_Chan_ga_Goi_Nem.Models.khuyen_mai
+
+@{
+    ViewBag.Title = "Delete Khuyến Mãi";
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+
+<div class="container">
+    <h2 class="text-center">Xóa Khuyến Mãi</h2>
+
+    <h3 class="text-center">Bạn có chắc chắn muốn xóa khuyến mãi này?</h3>
+
+    <fieldset>
+        <legend>Thông Tin Khuyến Mãi</legend>
+
+        <!-- Promotion Name -->
+        <div class="display-label">
+            @Html.DisplayNameFor(model => model.ten_khuyen_mai)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.ten_khuyen_mai)
+        </div>
+
+        <!-- Description -->
+        <div class="display-label">
+            @Html.DisplayNameFor(model => model.mo_ta)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.mo_ta)
+        </div>
+
+        <!-- Start Date -->
+        <div class="display-label">
+            @Html.DisplayNameFor(model => model.ngay_bat_dau)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.ngay_bat_dau)
+        </div>
+
+        <!-- End Date -->
+        <div class="display-label">
+            @Html.DisplayNameFor(model => model.ngay_ket_thuc)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.ngay_ket_thuc)
+        </div>
+
+        <!-- Discount -->
+        <div class="display-label">
+            @Html.DisplayNameFor(model => model.giam_gia)
+        </div>
+        <div class="display-field">
+            @Model.giam_gia %
+        </div>
+    </fieldset>
+
+    <!-- Delete Form -->
+    @using (Html.BeginForm("DeleteKhuyenMai", "Ad_Services", new { id = Model.khuyen_mai_id }, FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="text-center">
+            <button type="submit" class="btn btn-danger">Xóa Khuyến Mãi</button>
+            <br /><br />
+            @Html.ActionLink("Quay lại danh sách", "KhuyenMaiSP", new { @class = "btn btn-link" })
+        </div>
+    }
+</div>
+
+<style>
+    /* General Layout Styling */
+    .container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 30px;
+    }
+
+    h2, h3 {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 30px;
+    }
+
+    /* Fieldset Styling */
+    fieldset {
+        border: 2px solid #007bff;
+        padding: 20px;
+        border-radius: 10px;
+        background-color: #f9f9f9;
+        margin-bottom: 30px;
+    }
+
+    legend {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #007bff;
+    }
+
+    /* Display Section Styling */
+    .display-label {
+        font-size: 1.1rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: #555;
+    }
+
+    .display-field {
+        margin-bottom: 20px;
+        font-size: 1rem;
+        color: #333;
+    }
+
+    /* Button Styling */
+    button, input[type="submit"] {
+        padding: 10px 20px;
+        font-size: 1.1rem;
+        border-radius: 5px;
+        background-color: #dc3545;
+        border: 1px solid #dc3545;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.3s, border-color 0.3s;
+    }
+
+        button:hover, input[type="submit"]:hover {
+            background-color: #c82333;
+            border-color: #c82333;
+        }
+
+    a {
+        font-size: 1.1rem;
+        color: #007bff;
+        text-decoration: none;
+    }
+
+        a:hover {
+            text-decoration: underline;
+        }
+</style>

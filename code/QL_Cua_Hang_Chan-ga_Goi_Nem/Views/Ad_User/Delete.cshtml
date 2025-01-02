@@ -1,0 +1,126 @@
+﻿@model QL_Cua_Hang_Chan_ga_Goi_Nem.Models.nguoi_dung
+
+@{
+    ViewBag.Title = "Delete NguoiDung";
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+
+<h2>Xóa Người Dùng</h2>
+
+<div class="delete-container">
+    <div class="content">
+        <h4>Bạn có chắc muốn xóa người dùng này không?</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>Tên đăng nhập</dt>
+            <dd>@Model.ten_dang_nhap</dd>
+
+            <dt>Email</dt>
+            <dd>@Model.email</dd>
+
+            <dt>Vai trò</dt>
+            <dd>@Model.vai_tro</dd>
+        </dl>
+    </div>
+
+    @using (Html.BeginForm())
+    {
+        <div class="button-group">
+            <button type="submit" class="btn btn-danger">Delete</button>
+            @Html.ActionLink("Cancel", "HienThiNguoiDung", null, new { @class = "btn btn-secondary" })
+        </div>
+    }
+</div>
+
+<style>
+    /* General page styling */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f9;
+        margin: 0;
+        padding: 0;
+    }
+
+    h2 {
+        font-size: 2rem;
+        color: #333;
+        text-align: center;
+        margin-bottom: 20px;
+        padding-top: 20px;
+    }
+
+    /* Delete container styling */
+    .delete-container {
+        width: 100%;
+        max-width: 600px;
+        min-height: 500px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: center;
+    }
+
+    .content {
+        flex-grow: 1;
+    }
+
+    .dl-horizontal dt {
+        font-weight: bold;
+        color: #555;
+        float: left;
+        width: 150px;
+        text-align: left;
+    }
+
+    .dl-horizontal dd {
+        margin-left: 160px;
+        color: #333;
+    }
+
+    hr {
+        margin: 20px 0;
+    }
+
+    /* Button styling */
+    .button-group {
+        display: flex;
+        justify-content: space-around;
+        padding-top: 20px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 1rem;
+        font-weight: bold;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin: 5px;
+        width: 45%;
+    }
+
+    .btn-danger {
+        background-color: #dc3545;
+        color: white;
+        border: none;
+    }
+
+    .btn-secondary {
+        background-color: #6c757d;
+        color: white;
+        border: none;
+    }
+
+    .btn-danger:hover {
+        background-color: #c82333;
+    }
+
+    .btn-secondary:hover {
+        background-color: #5a6268;
+    }
+</style>

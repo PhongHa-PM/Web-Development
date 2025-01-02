@@ -1,0 +1,140 @@
+﻿@model IEnumerable<dynamic>
+
+@{
+    ViewBag.Title = "Chi Tiết Sản Phẩm Khuyến Mãi";
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+
+<h2 class="text-center mb-4">Chi Tiết Sản Phẩm Khuyến Mãi</h2>
+
+<div class="table-responsive">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Tên Sản Phẩm</th>
+                <th>Kích Thước</th>
+                <th>Độ Dày (cm)</th>
+                <th>Màu Sắc</th>
+                <th>Chất Liệu</th>
+                <th>Giá (VND)</th>
+                <th>Giá Khuyến Mãi (VND)</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.ten_san_pham</td>
+                    <td>@item.kich_thuoc</td>
+                    <td>@item.do_day</td>
+                    <td>@item.mau_sac</td>
+                    <td>@item.chat_lieu</td>
+                    <td>@String.Format("{0:N0}", item.gia)</td>
+                    <td>@String.Format("{0:N0}", item.gia_khuyen_mai)</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<style>
+    /* General Styling */
+    body {
+        font-family: Arial, sans-serif;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    .table-responsive {
+        overflow-x: auto;
+    }
+
+    .table {
+        width: 100%;
+        margin-bottom: 1rem;
+        color: #212529;
+        border-collapse: collapse;
+    }
+
+        .table th,
+        .table td {
+            padding: 12px;
+            text-align: left;
+            vertical-align: middle;
+            border-top: 1px solid #ddd;
+        }
+
+        .table th {
+            background-color: #f8f9fa;
+            color: #495057;
+            font-weight: bold;
+        }
+
+    .table-striped tbody tr:nth-child(odd) {
+        background-color: #f2f2f2;
+    }
+
+    .table-bordered {
+        border: 1px solid #ddd;
+    }
+
+        .table-bordered th,
+        .table-bordered td {
+            border: 1px solid #ddd;
+        }
+
+    /* Button Styling (Optional) */
+    .btn {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+        border-radius: 5px;
+        text-align: center;
+        cursor: pointer;
+        display: inline-block;
+        margin: 5px;
+        transition: background-color 0.3s;
+    }
+
+    .btn-info {
+        background-color: #17a2b8;
+        border-color: #17a2b8;
+        color: white;
+    }
+
+        .btn-info:hover {
+            background-color: #138496;
+            border-color: #117a8b;
+        }
+
+    .btn-danger {
+        background-color: #dc3545;
+        border-color: #dc3545;
+        color: white;
+    }
+
+        .btn-danger:hover {
+            background-color: #c82333;
+            border-color: #bd2130;
+        }
+
+    .btn-success {
+        background-color: #28a745;
+        border-color: #28a745;
+        color: white;
+    }
+
+        .btn-success:hover {
+            background-color: #218838;
+            border-color: #1e7e34;
+        }
+
+    /* Additional Styling */
+    .text-center {
+        text-align: center;
+    }
+</style>

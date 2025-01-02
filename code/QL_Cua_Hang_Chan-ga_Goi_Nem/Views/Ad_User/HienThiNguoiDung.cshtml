@@ -1,0 +1,119 @@
+﻿@model IEnumerable<QL_Cua_Hang_Chan_ga_Goi_Nem.Models.nguoi_dung>
+
+@{
+    ViewBag.Title = "Quản Lý tài khoản";
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+
+<h2 class="text-center my-4">Quản Lý tài khoản</h2>
+
+<!-- Nút thêm mới -->
+<p>
+    @Html.ActionLink("Thêm tài khoản", "Create", null, new { @class = "btn btn-success mb-3" })
+</p>
+
+<!-- Dropdown lọc và ô tìm kiếm -->
+<div class="mb-3 d-flex">
+    <div class="mr-3">
+        <input type="text" id="searchName" placeholder="Tìm theo tên" value="@Request.QueryString["searchName"]" class="form-control d-inline-block w-auto" oninput="applyFilters()" />
+    </div>
+    <div class="mr-3">
+        <select id="roleFilter" class="form-control d-inline-block w-auto" onchange="applyFilters()">
+            <option value="">Tất cả vai trò</option>
+            <option value="admin" @(Request.QueryString["roleFilter"] == "admin" ? "selected" : "")>Admin</option>
+            <option value="nguoi_dung" @(Request.QueryString["roleFilter"] == "nguoi_dung" ? "selected" : "")>Người dùng</option>
+        </select>
+    </div>
+    <div>
+        <select id="nameFilter" class="form-control d-inline-block w-auto" onchange="applyFilters()">
+            <option value="">Tất cả tên</option>
+            @foreach (var item in Model.Select(u => u.ten_dang_nhap).Distinct())
+            {
+                <option value="@item" @(Request.QueryString["nameFilter"] == item ? "selected" : "")>@item</option>
+            }
+        </select>
+    </div>
+</div>
+
+<!-- Nút xóa tất cả -->
+<form method="post" action="@Url.Action("DeleteSelected", "Ad_User")" id="deleteSelectedForm">
+    <button type="submit" class="btn btn-danger mb-3" onclick="return confirm('Bạn có chắc chắn muốn xóa những người dùng đã chọn?');">Xóa tất cả</button>
+
+    <div class="table-responsive">
+        <table class="table table-striped table-bordered text-center">
+            <thead class="thead-dark">
+                <tr>
+                    <th><input type="checkbox" id="selectAll" onclick="toggleSelectAll(this)" /></th>
+                    <th>
+                        <a href="?sortOrder=@ViewBag.NameSortParam" class="text-white">Tên đăng nhập</a>
+                    </th>
+                    <th>Mật khẩu</th>
+                    <th>Email</th>
+                    <th>Số điện thoại</th>
+                    <th>Địa chỉ</th>
+                    <th>Vai trò</th>
+                    <th>Ngày tạo</th>
+                    <th>Hành động</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td><input type="checkbox" name="selectedIds" value="@item.nguoi_dung_id" /></td>
+                        <td>@Html.DisplayFor(modelItem => item.ten_dang_nhap)</td>
+                        <td>@Html.DisplayFor(modelItem => item.mat_khau_hash)</td>
+                        <td>@Html.DisplayFor(modelItem => item.email)</td>
+                        <td>@Html.DisplayFor(modelItem => item.so_dien_thoai)</td>
+                        <td>@Html.DisplayFor(modelItem => item.dia_chi)</td>
+                        <td>@Html.DisplayFor(modelItem => item.vai_tro)</td>
+                        <td>@Html.DisplayFor(modelItem => item.ngay_tao)</td>
+                        <td>
+                            @Html.ActionLink("Xóa", "Delete", new { id = item.nguoi_dung_id }, new { @class = "btn btn-sm btn-danger" })
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</form>
+
+<script>
+    function applyFilters() {
+        const searchName = document.getElementById("searchName").value;
+        const roleFilter = document.getElementById("roleFilter").value;
+        const nameFilter = document.getElementById("nameFilter").value;
+        const url = `@Url.Action("HienThiNguoiDung", "Ad_User")?searchName=${searchName}&roleFilter=${roleFilter}&nameFilter=${nameFilter}`;
+        window.location.href = url;
+    }
+
+    // Chức năng chọn tất cả checkbox
+    function toggleSelectAll(source) {
+        const checkboxes = document.querySelectorAll("input[name='selectedIds']");
+        checkboxes.forEach((checkbox) => {
+            checkbox.checked = source.checked;
+        });
+    }
+</script>
+
+<style>
+    /* Additional custom styling */
+    .table th a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    .form-control, .btn {
+        margin-top: 0.5rem;
+    }
+
+    #selectAll {
+        width: 18px;
+        height: 18px;
+    }
+
+    /* Hover effect for action links */
+    .btn:hover {
+        opacity: 0.9;
+    }
+</style>

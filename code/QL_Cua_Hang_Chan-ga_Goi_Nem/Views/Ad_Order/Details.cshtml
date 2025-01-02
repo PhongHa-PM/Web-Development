@@ -1,0 +1,97 @@
+﻿@model QL_Cua_Hang_Chan_ga_Goi_Nem.Models.Admin_Md.OrderDetailViewModel
+
+@{
+    ViewBag.Title = "Chi Tiết Hóa Đơn";
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+
+<div class="container my-4">
+    <div class="card">
+        <div class="card-header bg-primary text-white">
+            <h3 class="mb-0">Thông Tin Hóa Đơn</h3>
+        </div>
+        <div class="card-body">
+            <div class="row mb-2">
+                <div class="col-md-6">
+                    <p><strong>Ngày Lập:</strong> @Model.NgayLap</p>
+                </div>
+                <div class="col-md-6">
+                    <p>
+                        <strong>Trạng Thái:</strong>
+                        <span class="badge @((Model.TrangThai == "cho_xac_nhan") ? "bg-warning text-dark" : "bg-success")">
+                            @Model.TrangThai
+                        </span>
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <p><strong>Tên Khách Hàng:</strong> @Model.TenKhachHang</p>
+                    <p><strong>Số Điện Thoại:</strong> @Model.SoDienThoai</p>
+                    <p><strong>Địa Chỉ Giao Hàng:</strong> @Model.DiaChiGiaoHang</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card mt-4">
+        <div class="card-header bg-info text-white">
+            <h3 class="mb-0">Danh Sách Sản Phẩm</h3>
+        </div>
+        <div class="card-body">
+            <table class="table table-bordered table-hover">
+                <thead class="bg-light">
+                    <tr>
+                        <th class="text-center">Tên Sản Phẩm</th>
+                        <th class="text-center">Kích Thước</th>
+                        <th class="text-center">Độ Dày</th>
+                        <th class="text-center">Màu Sắc</th>
+                        <th class="text-center">Số Lượng</th>
+                        <th class="text-center">Giá</th>
+                        <th class="text-center">Tổng Tiền</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.ChiTietHoaDon)
+                    {
+                        <tr>
+                            <td>@item.TenSanPham</td>
+                            <td>@item.KichThuoc</td>
+                            <td>@item.DoDay</td>
+                            <td>@item.MauSac</td>
+                            <td class="text-center">@item.SoLuong</td>
+                            <td class="text-end">@String.Format("{0:N0}", item.Gia) đ</td>
+                            <td class="text-end">@String.Format("{0:N0}", item.TongTien) đ</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    @if (Model.TrangThai == "cho_xac_nhan")
+    {
+        <div class="mt-4 text-end">
+            <form method="post" action="@Url.Action("ConfirmOrder", new { id = Model.HoaDonId })">
+                <button type="submit" class="btn btn-success">
+                    <i class="bi bi-check-circle"></i> Xác Nhận Giao Hàng
+                </button>
+            </form>
+        </div>
+    }
+</div>
+<style>
+    .card-header {
+        font-size: 1.25rem;
+        font-weight: bold;
+    }
+
+    .table {
+        margin-bottom: 0;
+    }
+
+        .table th, .table td {
+            vertical-align: middle;
+        }
+
+</style>

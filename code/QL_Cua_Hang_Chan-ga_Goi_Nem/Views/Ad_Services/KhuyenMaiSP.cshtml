@@ -1,0 +1,338 @@
+﻿@model IEnumerable<QL_Cua_Hang_Chan_ga_Goi_Nem.Models.khuyen_mai>
+
+@{
+    ViewBag.Title = "Khuyến Mãi Sản Phẩm";
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+
+<h2 class="text-center mb-4">Khuyến Mãi</h2>
+
+<p class="text-right">
+    @Html.ActionLink("Tạo Mới Khuyến Mãi", "CreateKhuyenMai", null, new { @class = "btn btn-success" })
+</p>
+
+<!-- Form Tìm kiếm và Lọc -->
+<div class="mb-4">
+    <form id="searchForm" class="form-inline d-flex">
+        <div class="form-group mr-2">
+            <input type="text" id="searchString" name="searchString" class="form-control" placeholder="Tìm kiếm khuyến mãi" />
+        </div>
+        <div class="form-group mr-2">
+            <select id="sortOrder" name="sortOrder" class="form-control">
+                <option value="name_asc">Tên A-Z</option>
+                <option value="name_desc">Tên Z-A</option>
+                <option value="date_asc">Ngày tạo cũ đến mới</option>
+                <option value="date_desc">Ngày tạo mới đến cũ</option>
+            </select>
+        </div>
+        <div class="form-group mr-2">
+            <select id="statusFilter" name="statusFilter" class="form-control">
+                <option value="">Tất cả</option>
+                <option value="ongoing">Đang hoạt động</option>
+                <option value="ended">Đã kết thúc</option>
+                <option value="not_started">Chưa bắt đầu</option>
+            </select>
+        </div>
+        <div class="form-group mr-2">
+            <input type="date" id="startDate" name="startDate" class="form-control" />
+        </div>
+        <div class="form-group mr-2">
+            <input type="date" id="endDate" name="endDate" class="form-control" />
+        </div>
+    </form>
+</div>
+
+<!-- Danh sách khuyến mãi -->
+<div class="table-responsive" style="width:100%">
+    <table class="table custom-table table-bordered table-striped" style="width:100%">
+        <thead class="thead-dark">
+            <tr>
+                <th style="width:50px;">Trạng thái</th>
+                <th>Tên Khuyến Mãi</th>
+                <th>Mô tả</th>
+                <th style="width:120px;">Bắt đầu</th>
+                <th style="width:120px;">Kết thúc</th>
+                <th style="width:100px;">Giảm giá (%)</th>
+                <th style="width:120px;">Ngày tạo</th>
+                <th>Thời gian đếm ngược</th> <!-- Cột Thời gian đếm ngược -->
+                <th>Chức năng</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                // Get current date
+                var currentDate = DateTime.Now;
+
+                // Determine the class for background color based on promotion status
+                string promotionStatusClass = "";
+                string promotionStatusText = "";
+                string countdownText = "";
+
+                if (currentDate > item.ngay_ket_thuc)
+                {
+                    promotionStatusClass = "promotion-ended";  // Red color for ended promotions
+                    promotionStatusText = "Đã kết thúc";
+                    countdownText = "❌"; // Ký hiệu đã kết thúc
+                }
+                else if (currentDate >= item.ngay_bat_dau && currentDate <= item.ngay_ket_thuc)
+                {
+                    promotionStatusClass = "promotion-ongoing";  // Green color for ongoing promotions
+                    promotionStatusText = "Đang hoạt động";
+                    countdownText = "Đang hoạt động";
+                }
+                else
+                {
+                    promotionStatusClass = "promotion-not-started";  // Light grey for not started promotions
+                    promotionStatusText = "Chưa bắt đầu";
+                    countdownText = "Chưa bắt đầu";
+                }
+
+                <tr class="@promotionStatusClass" data-enddate="@item.ngay_ket_thuc.ToString("yyyy-MM-dd HH:mm:ss")">
+                    <td>
+                        <input type="radio" name="status_@item.khuyen_mai_id" class="status-radio" disabled checked>
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.ten_khuyen_mai)</td>
+                    <td>@Html.DisplayFor(modelItem => item.mo_ta)</td>
+                    <td>@Html.DisplayFor(modelItem => item.ngay_bat_dau)</td>
+                    <td>@Html.DisplayFor(modelItem => item.ngay_ket_thuc)</td>
+                    <td>@Html.DisplayFor(modelItem => item.giam_gia) %</td>
+                    <td>@Html.DisplayFor(modelItem => item.ngay_tao)</td>
+                    <td class="countdown">
+                        @Html.Raw(countdownText)
+                    </td> <!-- Hiển thị thời gian đếm ngược -->
+                    <td>
+                        <a href="@Url.Action("EditKhuyenMai", new { id = item.khuyen_mai_id })">
+                            <img src="~/Content/Hinh_Anh/Icon/pen.png" />
+                        </a>
+                        <a href="@Url.Action("SanPhamKhuyenMai", new { KhuyenMaiId = item.khuyen_mai_id })">
+                            <img style="width:35px;height:35px;" src="~/Content/Hinh_Anh/Icon/information.png" />
+                        </a>
+                        <a href="@Url.Action("DeleteKhuyenMai", new { id = item.khuyen_mai_id })">
+                            <img src="~/Content/Hinh_Anh/Icon/bin.png" />
+                        </a>
+                    </td>
+                </tr>
+
+            }
+        </tbody>
+    </table>
+</div>
+
+<div id="khuyenMaiTableContainer">
+    <!-- Đây là nơi nội dung table sẽ được cập nhật sau khi AJAX thành công -->
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+<script>
+    $(document).ready(function () {
+        // Hàm cập nhật đếm ngược mỗi giây
+        setInterval(function () {
+            $(".promotion-ongoing").each(function () {
+                var endDate = $(this).data("enddate");
+                var countdownElement = $(this).find(".countdown");
+                var timeRemaining = calculateTimeRemaining(endDate);
+                countdownElement.text(timeRemaining);
+            });
+        }, 1000);
+
+        // Hàm tính toán thời gian còn lại
+        function calculateTimeRemaining(endDate) {
+            var currentTime = new Date();
+            var targetTime = new Date(endDate);
+            var timeDiff = targetTime - currentTime;
+            if (timeDiff <= 0) {
+                return "Khuyến mãi kết thúc!";
+            }
+
+            var days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+            return days + " ngày " + hours + " : " + minutes + " : " + seconds + "";
+        }
+    });
+</script>
+<script>
+    $(document).ready(function () {
+        // Xử lý sự kiện khi tìm kiếm hoặc thay đổi lọc
+        $('#searchString, #sortOrder, #statusFilter, #startDate, #endDate').on('change keyup', function () {
+            filterAndSort();
+        });
+
+        function filterAndSort() {
+            var searchString = $('#searchString').val();
+            var sortOrder = $('#sortOrder').val();
+            var statusFilter = $('#statusFilter').val();
+            var startDate = $('#startDate').val();
+            var endDate = $('#endDate').val();
+
+            $.ajax({
+                url: '@Url.Action("KhuyenMaiSP", "Ad_Services")',
+                data: {
+                    searchString: searchString,
+                    sortOrder: sortOrder,
+                    statusFilter: statusFilter,
+                    startDate: startDate,
+                    endDate: endDate
+                },
+                type: 'GET',
+                success: function (data) {
+                    $('table').html($(data).find('table').html());
+                }
+            });
+        }
+    });
+</script>
+}
+
+
+<style>
+
+    h2 {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    .text-center {
+        text-align: center;
+    }
+
+    .table-responsive {
+        overflow-x: auto;
+    }
+
+    .table {
+        width: 100%;
+        margin-bottom: 1rem;
+        color: #212529;
+        border-collapse: collapse;
+    }
+
+        .table th,
+        .table td {
+            padding: 12px;
+            text-align: left;
+            vertical-align: middle;
+            border-top: 1px solid #ddd;
+        }
+
+        .table th {
+            background-color: #f8f9fa;
+            color: #495057;
+            font-weight: bold;
+        }
+
+    .table-striped tbody tr:nth-child(odd) {
+        background-color: #f2f2f2;
+    }
+
+    .table-bordered {
+        border: 1px solid #ddd;
+    }
+
+        .table-bordered th,
+        .table-bordered td {
+            border: 1px solid #ddd;
+        }
+
+    .thead-dark {
+        background-color: #343a40;
+        color: white;
+    }
+
+    td a img {
+        width:30px;
+        height: 30px;
+        margin-right:5px
+    }
+
+    .btn {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+        border-radius: 5px;
+        text-align: center;
+        cursor: pointer;
+        display: inline-block;
+        margin: 5px;
+        transition: background-color 0.3s;
+    }
+
+    .btn-warning {
+        background-color: #ffc107;
+        border-color: #ffc107;
+        color: white;
+    }
+
+        .btn-warning:hover {
+            background-color: #e0a800;
+            border-color: #d39e00;
+        }
+
+    .btn-info {
+        background-color: #17a2b8;
+        border-color: #17a2b8;
+        color: white;
+    }
+
+        .btn-info:hover {
+            background-color: #138496;
+            border-color: #117a8b;
+        }
+
+    .btn-danger {
+        background-color: #dc3545;
+        border-color: #dc3545;
+        color: white;
+    }
+
+        .btn-danger:hover {
+            background-color: #c82333;
+            border-color: #bd2130;
+        }
+
+    .btn-success {
+        background-color: #28a745;
+        border-color: #28a745;
+        color: white;
+    }
+
+        .btn-success:hover {
+            background-color: #218838;
+            border-color: #1e7e34;
+        }
+
+    /* Custom radio button colors */
+    .status-radio {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 2px solid #ddd;
+        display: inline-block;
+        margin: 0;
+    }
+
+        .status-radio:checked {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+        }
+
+    .custom-table .promotion-ongoing .status-radio {
+        background-color: green;
+    }
+
+    .custom-table .promotion-ended .status-radio {
+        background-color: red;
+    }
+
+    .custom-table .promotion-not-started .status-radio {
+        background-color: gray;
+    }
+</style>

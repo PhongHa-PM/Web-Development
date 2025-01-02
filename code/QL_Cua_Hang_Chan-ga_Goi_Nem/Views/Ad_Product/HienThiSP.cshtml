@@ -1,0 +1,263 @@
+﻿@model IEnumerable<QL_Cua_Hang_Chan_ga_Goi_Nem.Models.san_pham>
+
+@{
+    ViewBag.Title = "Hiển Thị Sản Phẩm";
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+
+<div class="container">
+    <h2 class="text-center my-4">Danh Sách Sản Phẩm</h2>
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <a href="@Url.Action("Create")" class="btn btn-success text-white">+ Thêm Sản Phẩm Mới</a>
+
+        <div class="gap-3">
+            <div class="input-group" style="height:50%;">
+                <input type="text" id="searchTerm" class="form-control" placeholder="Tìm kiếm sản phẩm..." value="@ViewBag.SearchTerm" aria-label="Search">
+                <button class="btn btn-primary" type="button" onclick="applyFilter()">Tìm Kiếm</button>
+            </div>
+
+            <div class="d-flex">
+                <div class="form-group">
+                    <label for="loaiSanPham">Lọc Theo Loại</label>
+                    <select id="loaiSanPham" class="form-select" onchange="applyFilter()">
+                        <option value="">Tất cả</option>
+                        @foreach (var loai in ViewBag.LoaiSanPham as List<string>)
+                        {
+                            <option value="@loai" @(Request.QueryString["loaiSanPham"] == loai ? "selected" : "")>@loai</option>
+                        }
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="thuongHieu">Lọc Theo Thương Hiệu</label>
+                    <select id="thuongHieu" class="form-select" onchange="applyFilter()">
+                        <option value="">Tất cả</option>
+                        @foreach (var thuong in ViewBag.ThuongHieu as List<string>)
+                        {
+                            <option value="@thuong" @(Request.QueryString["thuongHieu"] == thuong ? "selected" : "")>@thuong</option>
+                        }
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <form id="deleteForm" method="post" action="@Url.Action("XoaNhieuSP", "Ad_Product")">
+        <button type="button" class="btn btn-danger mb-3" onclick="confirmDelete()">Xóa Sản Phẩm Đã Chọn</button>
+
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped align-middle">
+                <thead class="table-light">
+                    <tr>
+                        <th><input type="checkbox" id="selectAll" onclick="toggleAll(this)" /></th>
+                        <th>Hình Ảnh Chính</th>
+                        <th>Tên sản phẩm</th>
+                        <th>Loại sản phẩm</th>
+                        <th>Mô tả</th>
+                        <th>Thương hiệu</th>
+                        <th>Ds Hình ảnh</th>
+                        <th>Chức Năng</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="sanPhamIds" value="@item.san_pham_id" />
+                            </td>
+                            <td>
+                                <img src="~/Content/Hinh_Anh/@item.hinh_anh_chinh" class="img-thumbnail" style="width: 100px; height: auto;" />
+                            </td>
+                            <td>@Html.DisplayFor(modelItem => item.ten_san_pham)</td>
+                            <td>@Html.DisplayFor(modelItem => item.loai_san_pham)</td>
+                            <td class="truncate">@item.mo_ta_chung</td>
+                            <td>@Html.DisplayFor(modelItem => item.thuong_hieu)</td>
+                            <td>
+                                <div class="d-flex flex-wrap gap-2">
+                                    @foreach (var image in item.danh_sach_hinh_anh.Split(','))
+                                    {
+                                        <img src="~/Content/Hinh_Anh/@image.Trim()" class="img-thumbnail" style="width: 50px; height: 50px;" />
+                                    }
+                                </div>
+                            </td>
+                            <td class="d-flex">
+                                <a href="@Url.Action("Edit", new { id = item.san_pham_id })">
+                                    <img style="width:30px" src="~/Content/Hinh_Anh/Icon/pen.png" />
+                                </a> |
+                                <a href="@Url.Action("HienThiChiTietSanPham", new { san_pham_id = item.san_pham_id })">
+                                    <img style="width:35px" src="~/Content/Hinh_Anh/Icon/information.png" />
+                                </a> |
+                                <a href="@Url.Action("Delete", new { id = item.san_pham_id })">
+                                    <img style="width:30px" src="~/Content/Hinh_Anh/Icon/bin.png" />
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </form>
+</div>
+
+<script>
+    function toggleAll(source) {
+        let checkboxes = document.getElementsByName('sanPhamIds');
+        checkboxes.forEach((checkbox) => checkbox.checked = source.checked);
+    }
+
+    function confirmDelete() {
+        if (confirm("Bạn có chắc muốn xóa các sản phẩm đã chọn không?")) {
+            document.getElementById('deleteForm').submit();
+        }
+    }
+
+    function applyFilter() {
+        const loaiSanPham = document.getElementById("loaiSanPham").value;
+        const thuongHieu = document.getElementById("thuongHieu").value;
+        const searchTerm = document.getElementById("searchTerm").value;
+        const url = '@Url.Action("HienThiSP", "Ad_Product")';
+        window.location.href = `${url}?loaiSanPham=${loaiSanPham}&thuongHieu=${thuongHieu}&searchTerm=${searchTerm}`;
+    }
+    document.querySelectorAll('.truncate').forEach(td => {
+        const text = td.innerText;
+        if (text.length > 50) {
+            td.innerText = text.substring(0, 50) + '...';
+        }
+    });
+</script>
+
+
+<style>
+    /* General Layout */
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    /* Header */
+    h2 {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #333;
+    }
+
+    /* Button styling */
+    .btn {
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        border: 1px solid #007bff;
+    }
+
+    .btn-danger {
+        background-color: #dc3545;
+        border: 1px solid #dc3545;
+    }
+    .btn-success {
+        background-color: #28a745;
+        border-color: #28a745;
+        color: white;
+    }
+
+        .btn-success:hover {
+            background-color: #218838;
+            border-color: #1e7e34;
+        }
+
+    /* Table styling */
+    .table {
+        width: 100%;
+        margin-top: 20px;
+        border-collapse: collapse;
+    }
+
+    .table-bordered {
+        border: 1px solid #ddd;
+    }
+
+    .table-striped tbody tr:nth-child(odd) {
+        background-color: #f9f9f9;
+    }
+
+    .table-light {
+        background-color: #f1f1f1;
+    }
+
+    .table th, .table td {
+        padding: 12px;
+        text-align: center;
+    }
+
+    .table th {
+        background-color: #f8f9fa;
+        color: #333;
+    }
+
+    .table td img {
+        max-width: 100px;
+        max-height: 100px;
+    }
+
+    /* Search and Filter Section */
+    .input-group {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+        .input-group input {
+            width: 300px;
+            padding: 10px;
+        }
+
+        .input-group button {
+            margin-left: 10px;
+            padding: 10px 15px;
+        }
+
+    .form-group {
+        margin-right: 20px;
+    }
+
+    .form-select {
+        width: 200px;
+        padding: 10px;
+    }
+
+    .d-flex {
+        display: flex;
+        align-items: center;
+    }
+
+        .d-flex .form-group {
+            margin-right: 20px;
+        }
+
+        /* Footer links and actions */
+        .d-flex a {
+            color: #007bff;
+            text-decoration: none;
+            padding: 5px 10px;
+        }
+
+            .d-flex a:hover {
+                color: #0056b3;
+            }
+
+    /* Checkbox and Image styling */
+    input[type="checkbox"] {
+        margin: 0;
+    }
+
+    .img-thumbnail {
+        border-radius: 5px;
+        margin-right: 5px;
+    }
+</style>

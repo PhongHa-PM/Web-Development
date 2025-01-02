@@ -1,0 +1,168 @@
+﻿@model QL_Cua_Hang_Chan_ga_Goi_Nem.Models.nguoi_dung
+
+@{
+    ViewBag.Title = "Create NguoiDung";
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+
+<h2>Thêm Tài Khoản Admin</h2>
+
+@using (Html.BeginForm("Create", "Ad_User", FormMethod.Post, new { id = "createForm" }))
+{
+    <div class="form-group">
+        <label for="ten_dang_nhap">Tên đăng nhập</label>
+        @Html.TextBoxFor(model => model.ten_dang_nhap, new { @class = "form-control", id = "ten_dang_nhap" })
+    </div>
+    <div class="form-group">
+        <label for="mat_khau_hash">Mật khẩu</label>
+        @Html.PasswordFor(model => model.mat_khau_hash, new { @class = "form-control", id = "mat_khau_hash" })
+    </div>
+    <div class="form-group">
+        <label for="email">Email</label>
+        @Html.TextBoxFor(model => model.email, new { @class = "form-control", id = "email" })
+    </div>
+    <div class="form-group">
+        <label for="so_dien_thoai">Số điện thoại</label>
+        @Html.TextBoxFor(model => model.so_dien_thoai, new { @class = "form-control", id = "so_dien_thoai" })
+    </div>
+    <div class="form-group">
+        <label for="dia_chi">Địa chỉ</label>
+        @Html.TextBoxFor(model => model.dia_chi, new { @class = "form-control", id = "dia_chi" })
+    </div>
+    <button type="submit" class="btn btn-primary">Create</button>
+    @Html.ActionLink("Cancel", "HienThiNguoiDung", null, new { @class = "btn btn-secondary Cancel" })
+}
+
+@section Scripts {
+    <script type="text/javascript">
+        // Hàm kiểm tra Tên đăng nhập không có dấu và không có khoảng trắng
+        function validateUsername(username) {
+            // Kiểm tra tên đăng nhập không có khoảng trắng và không có dấu
+            const regex = /^[a-zA-Z0-9_]+$/; // Chỉ cho phép chữ cái, số và dấu gạch dưới
+            return regex.test(username);
+        }
+
+        // Hàm kiểm tra email có đuôi @@email.com hoặc @@yahoo.com
+        function validateEmail(email) {
+            const regex = /^[a-zA-Z0-9._%+-]+(@@gmail\.com|@@yahoo\.com)$/;
+            return regex.test(email);
+        }
+
+        // Lắng nghe sự kiện submit của form
+        document.getElementById("createForm").addEventListener("submit", function(event) {
+            let valid = true;
+
+            // Lấy giá trị các trường
+            const username = document.getElementById("ten_dang_nhap").value;
+            const email = document.getElementById("email").value;
+
+            // Kiểm tra Tên đăng nhập
+            if (!validateUsername(username)) {
+                alert("Tên đăng nhập không hợp lệ. Chỉ được sử dụng chữ, số và dấu gạch dưới, không có khoảng trắng hoặc dấu.");
+                valid = false;
+            }
+
+            // Kiểm tra Email
+            if (!validateEmail(email)) {
+                alert("Email phải có đuôi @@email.com hoặc @@yahoo.com");
+                valid = false;
+            }
+
+            // Nếu không hợp lệ, ngừng gửi form
+            if (!valid) {
+                event.preventDefault();
+            }
+        });
+    </script>
+}
+
+
+
+<style>
+    /* General page styling */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f9;
+        margin: 0;
+        padding: 0;
+    }
+
+    h2 {
+        font-size: 2rem;
+        color: #333;
+        text-align: center;
+        margin-bottom: 20px;
+        padding-top: 20px;
+    }
+
+    /* Form container styling */
+    form {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Form group styling */
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+        .form-group label {
+            font-weight: bold;
+            color: #555;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="password"],
+        .form-group input[type="tel"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 1rem;
+            color: #555;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+    /* Button styling */
+    button[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: #fff;
+        background-color: #007bff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+    .Cancel {
+        width: 100%;
+        padding: 10px;
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+</style>

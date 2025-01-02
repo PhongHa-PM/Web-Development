@@ -1,0 +1,149 @@
+﻿@model IEnumerable<dynamic>
+
+@{
+    ViewBag.Title = "SanPhamKhuyenMai";
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+
+<h2 class="text-center mb-4">Danh Sách Sản Phẩm Khuyến Mãi</h2>
+
+<p class="">
+    @Html.ActionLink("Thêm Sản Phẩm Vào Khuyến Mãi", "ThemSanPhamVaoKhuyenMai", new { khuyenMaiId = ViewBag.KhuyenMaiId }, new { @class = "btn btn-success" })
+</p>
+
+<div class="table-responsive">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Sản Phẩm ID</th>
+                <th>Tên Sản Phẩm</th>
+                <th>Giảm Giá</th>
+                <th>Hành động</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.san_pham_id</td>
+                    <td>@item.ten_san_pham</td>
+                    <td>@item.giam_gia</td>
+                    <td>
+                        @* Nút Chi tiết *@
+                        <a href="@Url.Action("ChiTietSanPhamKhuyenMai", "Ad_Services", new { khuyenMaiId = item.khuyen_mai_id, sanPhamId = item.san_pham_id })" class="btn btn-info btn-sm">Chi tiết</a>
+
+                        @* Nút Xóa *@
+                        <a href="@Url.Action("XoaSanPhamKhoiKhuyenMai", "Ad_Services", new { khuyenMaiId = item.khuyen_mai_id, sanPhamId = item.san_pham_id })" class="btn btn-danger btn-sm" onclick="return confirm('Bạn có chắc chắn muốn xóa sản phẩm này khỏi khuyến mãi?');">Xóa</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<style>
+    /* General Styling */
+    body {
+        font-family: Arial, sans-serif;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    .table-responsive {
+        overflow-x: auto;
+    }
+
+    .table {
+        width: 100%;
+        margin-bottom: 1rem;
+        color: #212529;
+        border-collapse: collapse;
+    }
+
+        .table th,
+        .table td {
+            padding: 12px;
+            text-align: left;
+            vertical-align: middle;
+            border-top: 1px solid #ddd;
+        }
+
+        .table th {
+            background-color: #f8f9fa;
+            color: #495057;
+            font-weight: bold;
+        }
+
+    .table-striped tbody tr:nth-child(odd) {
+        background-color: #f2f2f2;
+    }
+
+    .table-bordered {
+        border: 1px solid #ddd;
+    }
+
+        .table-bordered th,
+        .table-bordered td {
+            border: 1px solid #ddd;
+        }
+
+    /* Button Styling */
+    .btn {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+        border-radius: 5px;
+        text-align: center;
+        cursor: pointer;
+        display: inline-block;
+        margin: 5px;
+        transition: background-color 0.3s;
+    }
+
+    .btn-info {
+        background-color: #17a2b8;
+        border-color: #17a2b8;
+        color: white;
+    }
+
+        .btn-info:hover {
+            background-color: #138496;
+            border-color: #117a8b;
+        }
+
+    .btn-danger {
+        background-color: #dc3545;
+        border-color: #dc3545;
+        color: white;
+    }
+
+        .btn-danger:hover {
+            background-color: #c82333;
+            border-color: #bd2130;
+        }
+
+    .btn-success {
+        background-color: #28a745;
+        border-color: #28a745;
+        color: white;
+    }
+
+        .btn-success:hover {
+            background-color: #218838;
+            border-color: #1e7e34;
+        }
+
+    /* Action Button Adjustments */
+    .btn-sm {
+        padding: 5px 10px;
+        font-size: 0.8rem;
+    }
+
+    .text-center {
+        text-align: center;
+    }
+</style>

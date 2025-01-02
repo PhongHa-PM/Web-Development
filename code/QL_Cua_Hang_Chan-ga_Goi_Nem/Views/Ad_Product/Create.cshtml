@@ -1,0 +1,155 @@
+﻿@model QL_Cua_Hang_Chan_ga_Goi_Nem.Models.san_pham
+
+@{
+    ViewBag.Title = "Thêm Sản Phẩm Mới";
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+
+<div class="container">
+    <h2 class="text-center">Thêm Sản Phẩm Mới</h2>
+
+    @using (Html.BeginForm("Create", "Ad_Product", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <!-- Product Name -->
+        <div class="form-group mb-4">
+            <label for="ten_san_pham">Tên sản phẩm</label>
+            @Html.TextBoxFor(model => model.ten_san_pham, new { @class = "form-control", id = "ten_san_pham", rows = 5 })
+        </div>
+
+        <!-- Product Category -->
+        <div class="form-group mb-4">
+            <label for="loai_san_pham">Loại sản phẩm</label>
+            <div class="input-group">
+                @Html.TextBox("new_loai_san_pham", null, new { @class = "form-control", placeholder = "Nhập hoặc chọn loại sản phẩm", id = "new_loai_san_pham" })
+                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Chọn</button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                    @foreach (var item in ViewBag.LoaiSanPham as SelectList)
+                    {
+                        <li>
+                            <a class="dropdown-item" href="#" onclick="document.getElementById('new_loai_san_pham').value='@item.Text';">
+                                @item.Text
+                            </a>
+                        </li>
+                    }
+                </ul>
+            </div>
+        </div>
+
+        <!-- Brand -->
+        <div class="form-group mb-4">
+            <label for="thuong_hieu">Thương hiệu</label>
+            <div class="input-group">
+                @Html.TextBox("new_thuong_hieu", null, new { @class = "form-control", placeholder = "Nhập hoặc chọn thương hiệu", id = "new_thuong_hieu" })
+                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Chọn</button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                    @foreach (var item in ViewBag.ThuongHieu as SelectList)
+                    {
+                        <li>
+                            <a class="dropdown-item" href="#" onclick="document.getElementById('new_thuong_hieu').value='@item.Text';">
+                                @item.Text
+                            </a>
+                        </li>
+                    }
+                </ul>
+            </div>
+        </div>
+
+        <!-- Description -->
+        <div class="form-group mb-4">
+            <label for="mo_ta_chung">Mô tả chung</label>
+            @Html.TextAreaFor(model => model.mo_ta_chung, new { @class = "form-control", id = "mo_ta_chung" })
+        </div>
+
+        <!-- Main Image -->
+        <div class="form-group mb-4">
+            <label for="hinh_anh_chinh">Hình ảnh chính</label>
+            <input type="file" name="hinh_anh_chinh" class="form-control" />
+        </div>
+
+        <!-- Image Gallery -->
+        <div class="form-group mb-4">
+            <label for="danh_sach_hinh_anh">Danh sách hình ảnh</label>
+            <input type="file" name="danh_sach_hinh_anh" multiple class="form-control" />
+        </div>
+
+        <!-- Submit Button -->
+        <div class="form-group mb-4">
+            <button type="submit" class="btn btn-primary btn-block">Lưu</button>
+        </div>
+    }
+</div>
+
+<style>
+    /* General Form Layout */
+    .container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 30px;
+    }
+
+    h2 {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 30px;
+    }
+
+    /* Form Input Styling */
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    label {
+        font-size: 1.1rem;
+        color: #333;
+        margin-bottom: 5px;
+    }
+
+    .form-control {
+        border-radius: 5px;
+        padding: 10px;
+        font-size: 1rem;
+        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Dropdown Styling */
+    .input-group .dropdown-toggle {
+        border-radius: 5px;
+        padding: 8px 10px;
+    }
+
+    .dropdown-menu {
+        min-width: 200px;
+        padding: 0;
+    }
+
+    .dropdown-item {
+        padding: 10px;
+        font-size: 1rem;
+    }
+
+    /* File Input Styling */
+    input[type="file"] {
+        padding: 10px;
+    }
+
+    /* Button Styling */
+    .btn-primary {
+        padding: 10px 20px;
+        font-size: 1.1rem;
+        border-radius: 5px;
+        background-color: #007bff;
+        border: 1px solid #007bff;
+        transition: background-color 0.3s;
+    }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+
+    /* Section Spacing */
+    .mb-4 {
+        margin-bottom: 30px;
+    }
+</style>

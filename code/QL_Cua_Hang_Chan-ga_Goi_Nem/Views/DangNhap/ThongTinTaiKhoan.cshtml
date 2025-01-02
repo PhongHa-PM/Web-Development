@@ -1,0 +1,62 @@
+﻿@model QL_Cua_Hang_Chan_ga_Goi_Nem.Models.nguoi_dung
+
+@{
+    ViewBag.Title = "Thông Tin Tài Khoản";
+    Layout = "~/Views/Shared/User_Layout.cshtml";
+}
+
+
+<div class="container mt-5">
+    <a href="~/Us_Product/HienThiSanPhamNem" style="font-size:40px; text-decoration:none"><i class='bx bx-chevron-left'></i></a>
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-lg">
+                <div class="card-header bg-primary text-white text-center">
+                    <h4>Thông Tin Tài Khoản</h4>
+                </div>
+                <div class="card-body">
+                    <p><strong>Tên đăng nhập:</strong> @Model.ten_dang_nhap</p>
+                    <p><strong>Email:</strong> @Model.email</p>
+                    <p><strong>Số điện thoại:</strong> @Model.so_dien_thoai</p>
+                    <p><strong>Địa chỉ:</strong> @Model.dia_chi</p>
+                    <p><strong>Vai trò:</strong> @(Model.vai_tro == "admin" ? "Quản trị viên" : "Người dùng")</p>
+                    <p><strong>Ngày tạo tài khoản:</strong> @Model.ngay_tao</p>
+                </div>
+                <div class="card-footer text-center">
+                    <a href="@Url.Action("SuaThongTinTaiKhoan", "DangNhap")" class="btn btn-warning">Sửa thông tin</a>
+                    <a href="@Url.Action("DangXuat", "DangNhap")" class="btn btn-danger">Đăng xuất</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .card {
+        border-radius: 15px;
+        transition: transform 0.3s ease;
+    }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+    .card-title {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .card-footer {
+        background-color: white;
+        border-top: none;
+    }
+
+    .btn-outline-primary {
+        border-radius: 20px;
+    }
+
+    .btn-outline-danger {
+        border-radius: 20px;
+    }
+</style>
+

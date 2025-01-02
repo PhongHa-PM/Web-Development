@@ -1,0 +1,79 @@
+﻿@model IEnumerable<QL_Cua_Hang_Chan_ga_Goi_Nem.Models.Admin_Md.DoanhThuModel>
+
+@{
+    ViewBag.Title = "Báo Cáo Doanh Thu";
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+
+<h2 class="text-center my-4">Báo Cáo Doanh Thu</h2>
+
+<!-- Form lọc theo thời gian -->
+@using (Html.BeginForm("Index", "Ad_Revenue", FormMethod.Get))
+{
+    <div class="row mb-4">
+        <div class="col-md-4">
+            <label for="startDate" class="form-label">Từ Ngày:</label>
+            <input type="date" id="startDate" name="startDate" class="form-control"
+                   value="@ViewBag.StartDate" />
+        </div>
+        <div class="col-md-4">
+            <label for="endDate" class="form-label">Đến Ngày:</label>
+            <input type="date" id="endDate" name="endDate" class="form-control"
+                   value="@ViewBag.EndDate" />
+        </div>
+        <div class="col-md-4 d-flex align-items-end">
+            <button type="submit" class="btn btn-primary w-100">Lọc</button>
+        </div>
+    </div>
+}
+
+
+<!-- Bảng báo cáo doanh thu -->
+<table class="table table-bordered table-striped table-hover">
+    <thead class="thead-dark">
+        <tr>
+            <th class="text-center" scope="col">Mã Hóa Đơn</th>
+            <th class="text-center" scope="col">Ngày Đặt</th>
+            <th class="text-center" scope="col">Tổng Tiền</th>
+            <th class="text-center" scope="col">Trạng Thái</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var hoaDon in Model)
+        {
+            <tr>
+                <td class="text-center">@hoaDon.HoaDonId</td>
+                <td class="text-center">@hoaDon.NgayLap</td>
+                <td class="text-end">@hoaDon.TongTien.ToString("N0")</td>
+                <td class="text-center">
+                    @if (hoaDon.TrangThai == "da_giao")
+                    {
+                        <span class="text-success">Đã Giao Hàng</span>
+                    }
+                    else
+                    {
+                        @hoaDon.TrangThai
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!-- Hiển thị tổng tiền -->
+<div class="alert alert-info text-center">
+    <strong>Tổng Tiền: @ViewBag.TongTien.ToString("N0")</strong>
+</div>
+
+<style>
+    /* Tùy chỉnh màu nền cho bảng */
+    .table thead th {
+        background-color: #007bff;
+        color: white;
+    }
+
+    /* Tùy chỉnh form nhập liệu */
+    .form-label {
+        font-weight: bold;
+    }
+</style>

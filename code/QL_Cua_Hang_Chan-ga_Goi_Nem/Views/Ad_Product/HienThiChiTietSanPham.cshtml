@@ -1,0 +1,110 @@
+﻿@model IEnumerable<QL_Cua_Hang_Chan_ga_Goi_Nem.Models.chi_tiet_san_pham>
+
+@{
+    ViewBag.Title = "Chi Tiết Sản Phẩm";
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+
+<div class="container">
+    <p class="text-right">
+        <a href="@Url.Action("CreateCTSP", "Ad_Product", new { san_pham_id = ViewBag.SanPhamId })" class="btn btn-success">+ Thêm mới</a>
+    </p>
+
+    <table class="table table-bordered table-striped">
+        <thead class="thead-light">
+            <tr>
+                <th>Kích thước</th>
+                <th>Độ dày</th>
+                <th>Màu sắc</th>
+                <th>Chất liệu</th>
+                <th>Giá</th>
+                <th>Giá khuyến mãi</th>
+                <th>Số lượng tồn</th>
+                <th class="text-center">Thao tác</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.kich_thuoc)</td>
+                    <td>@Html.DisplayFor(modelItem => item.do_day)</td>
+                    <td>@Html.DisplayFor(modelItem => item.mau_sac)</td>
+                    <td>@Html.DisplayFor(modelItem => item.chat_lieu)</td>
+                    <td>@String.Format("{0:N0} ₫", item.gia)</td>
+                    <td>@String.Format("{0:N0} ₫", item.gia_khuyen_mai)</td>
+                    <td>@Html.DisplayFor(modelItem => item.so_luong_ton)</td>
+                    <td class="text-center">
+                        <a href="@Url.Action("EditCTSP", new { id = item.chi_tiet_id })" class="btn btn-primary btn-sm">Sửa</a>
+                        |
+                        <a href="@Url.Action("DeleteCTSP", new { id = item.chi_tiet_id })" class="btn btn-danger btn-sm"
+                           onclick="return confirm('Bạn có chắc chắn muốn xóa chi tiết sản phẩm này?');">Xóa</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<style>
+    /* General Layout */
+.container {
+    max-width: 2000px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Table Styling */
+.table {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.table th, .table td {
+    padding: 15px;
+    text-align: center;
+}
+
+.table th {
+    background-color: #007bff;
+    color: white;
+    font-size: 1.1rem;
+}
+
+.table td {
+    font-size: 1rem;
+    color: #555;
+}
+
+.table td button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.table td button:hover {
+    background-color: #c82333;
+}
+
+/* Link Button */
+.btn-link {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.btn-link:hover {
+    text-decoration: underline;
+}
+
+</style>
